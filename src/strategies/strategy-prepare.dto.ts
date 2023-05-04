@@ -8,10 +8,16 @@ export const StrategyPrepareRequestSchema = z.object({
   cid: CidSchema,
 });
 
-export type StrategyPrepareRequest = z.infer<
-  typeof StrategyPrepareRequestSchema
->;
 
 export const StrategyPrepareResponseSchema = z.object({
   presignedUrl: z.string().url(),
 });
+
+
+export type StrategyPrepareRequest = z.infer<
+  typeof StrategyPrepareRequestSchema
+>;
+
+export type StrategyPrepareResponse = z.infer<
+  typeof StrategyPrepareResponseSchema
+>;

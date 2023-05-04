@@ -12,3 +12,6 @@ export const LiquidationsResponseSchema = z.object({
   result: z.array(Liquidation),
   count: z.number().int().min(0).max(100),
 });
+
+export type Liquidation = z.infer<typeof Liquidation>;
+export type LiquidationsResponse = z.infer<typeof LiquidationsResponseSchema>;
