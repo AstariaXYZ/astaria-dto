@@ -1,0 +1,32 @@
+{
+  "name": "@astariaxyz/dto",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tsdx lint",
+    "prepare": "yarn tsc --build && husky install",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "dependencies": {
+    "@astariaxyz/sdk": "^1.0.0-alpha.29",
+    "tsc": "^2.0.4",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "husky": "^8.0.2"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/sdk.esm.js",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tsdx lint",
+      "eslint --cache --fix",
+      "yarn format"
+    ]
+  }
+}
