@@ -1,0 +1,25 @@
+{
+  "name": "@astariaxyz/dto",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "husky install"
+  },
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@astariaxyz/sdk": "1.0.0-alpha.31",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "husky": "^8.0.3",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  }
+}
