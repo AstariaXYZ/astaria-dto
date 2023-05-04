@@ -3,10 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "lint": "tsdx lint",
-    "prepare": "yarn tsc --build && husky install",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "build": "yarn tsc --build && husky install",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "@astariaxyz/sdk": "^1.0.0-alpha.29",
