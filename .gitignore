@@ -8,7 +8,6 @@ yarn.lock
 
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # dotenv environment variable files
 .env
@@ -16,6 +15,4 @@ jspm_packages/
 .env.test.local
 .env.production.local
 .env.local
-.nuxt
-dist
 
