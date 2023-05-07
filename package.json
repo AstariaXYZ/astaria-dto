@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "yarn tsc --build",
+    "build": "yarn tsc src/index.ts",
     "postinstall": "yarn build"
   },
   "dependencies": {
@@ -16,9 +16,11 @@
   "devDependencies": {
     "@types/node": "^18.11.17"
   },
+
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/sdk.esm.js",
+  "module": "dist/index.esm.js",
+  "files": ["dist"],
   "lint-staged": {
     "*.{ts,tsx}": [
       "tsdx lint",

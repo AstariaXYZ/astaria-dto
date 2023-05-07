@@ -1,12 +1,13 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src/strategies/*"],
   "compilerOptions": {
     "module": "esnext",
     "lib": ["dom", "esnext"],
+    "outDir": "dist/",
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
-    "rootDir": "./src",
+    "rootDir": "src/",
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
