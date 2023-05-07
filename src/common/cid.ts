@@ -1,4 +1,4 @@
-import z from "zod";
+import { z } from "zod";
 
 //TODO: move to sdk
 export const CidSchema = z

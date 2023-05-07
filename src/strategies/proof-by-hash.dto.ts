@@ -1,5 +1,5 @@
 import { ProofSchema, SignatureSchema, TypedDataSchema } from "@astariaxyz/sdk";
-import z from "zod";
+import {z} from "zod";
 import { CidSchema } from "../common/cid";
 
 export const ProofByHashResponseSchema = z.object({

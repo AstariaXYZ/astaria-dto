@@ -1,4 +1,4 @@
-import z from "zod";
+import * as z from "zod";
 import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { CidSchema } from "../common/cid";
 

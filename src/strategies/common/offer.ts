@@ -6,7 +6,7 @@ import {
   StrategyLeafType,
 } from "@astariaxyz/sdk";
 import { CidSchema } from "../../common/cid";
-import z from "zod";
+import { z } from "zod";
 
 export const OfferSchema = z.object({
   vault: AddressSchema,

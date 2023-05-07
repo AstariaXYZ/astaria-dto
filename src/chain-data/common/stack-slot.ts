@@ -1,4 +1,4 @@
-import z from "zod";
+import { z } from "zod";
 import { Uint256Schema, LienSchema } from "@astariaxyz/sdk";
 
 export const PointSchema = z.object({

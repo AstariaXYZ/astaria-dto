@@ -1,5 +1,5 @@
 import { Uint256Schema, AddressSchema, HexSchema } from "@astariaxyz/sdk";
-import z from "zod";
+import {z} from "zod";
 
 export const SeaportConsiderationItemSchema = z.object({
   identifierOrCriteria: z.string(),

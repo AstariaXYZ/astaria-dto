@@ -1,4 +1,4 @@
-import z from "zod";
+import { z } from "zod";
 import { AddressSchema, HexSchema, Uint256Schema } from "@astariaxyz/sdk";
 
 export enum VaultType {

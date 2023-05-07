@@ -1,4 +1,4 @@
-import z from "zod";
+import {z} from "zod";
 import { Uint256Schema } from "@astariaxyz/sdk";
 import { StackSlotSchema } from "./common/stack-slot";
 

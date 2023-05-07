@@ -1,4 +1,4 @@
-import z from "zod";
+import { z } from "zod";
 import { OfferSchema } from "./common/offer";
 
 export const OffersByAssetResponseSchema = z.object({

@@ -1,4 +1,4 @@
-import z from "zod";
+import { z } from "zod";
 import { StackSlotSchema } from "./common/stack-slot";
 
 export const StackByCollateralIdResponseSchema = z.array(StackSlotSchema);
