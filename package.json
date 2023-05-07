@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "yarn tsc --build && husky install",
+    "build": "yarn tsc",
     "postinstall": "yarn build"
   },
   "dependencies": {
@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
-    "husky": "^8.0.2"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
