@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "yarn tsc",
+    "build": "yarn tsc --build",
     "postinstall": "yarn build"
   },
   "dependencies": {
