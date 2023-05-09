@@ -28,7 +28,15 @@ export const VaultResponseSchema = z.object({
   profile: z.string().optional(),
 });
 
+export const VaultsResponseSchema = z.object({
+  results: z.array(VaultResponseSchema),
+  count: z.number().int().positive().max(100),
+});
+
 export type WithdrawBalance = z.infer<typeof WithdrawBalanceSchema>;
+
+export type VaultsResponse = z.input<typeof VaultsResponseSchema>;
+export type VaultsParsedResponse = z.infer<typeof VaultsResponseSchema>;
 
 export type VaultResponse = z.input<typeof VaultResponseSchema>;
 export type VaultParsedResponse = z.infer<typeof VaultResponseSchema>;

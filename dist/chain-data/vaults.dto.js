@@ -25,4 +25,8 @@ export const VaultResponseSchema = z.object({
     banner: z.string().optional(),
     profile: z.string().optional(),
 });
+export const VaultsResponseSchema = z.object({
+    results: z.array(VaultResponseSchema),
+    count: z.number().int().positive().max(100),
+});
 //# sourceMappingURL=vaults.dto.js.map

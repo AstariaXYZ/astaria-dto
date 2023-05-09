@@ -9,7 +9,7 @@ export const Liquidation = z.object({
 });
 
 export const LiquidationsResponseSchema = z.object({
-  result: z.array(Liquidation),
+  results: z.array(Liquidation),
   count: z.number().int().min(0).max(100),
 });
 

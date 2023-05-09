@@ -7,7 +7,7 @@ export const Liquidation = z.object({
     position: z.number().int().min(0).max(4),
 });
 export const LiquidationsResponseSchema = z.object({
-    result: z.array(Liquidation),
+    results: z.array(Liquidation),
     count: z.number().int().min(0).max(100),
 });
 //# sourceMappingURL=liquidations.dto.js.map

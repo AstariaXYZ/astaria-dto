@@ -432,7 +432,7 @@ export declare const Liquidation: z.ZodObject<{
     position: number;
 }>;
 export declare const LiquidationsResponseSchema: z.ZodObject<{
-    result: z.ZodArray<z.ZodObject<{
+    results: z.ZodArray<z.ZodObject<{
         collateralId: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
             hex: z.ZodString;
             type: z.ZodLiteral<"BigNumber">;
@@ -866,8 +866,7 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
     }>, "many">;
     count: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
-    count: number;
-    result: {
+    results: {
         collateralId: import("ethers").BigNumber;
         stack: {
             lien: {
@@ -886,9 +885,9 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
         }[];
         position: number;
     }[];
-}, {
     count: number;
-    result: {
+}, {
+    results: {
         collateralId: (string | import("ethers").BigNumber | {
             hex: string;
             type: "BigNumber";
@@ -967,6 +966,7 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
         }[];
         position: number;
     }[];
+    count: number;
 }>;
 export type Liquidation = z.infer<typeof Liquidation>;
 export type LiquidationsResponse = z.input<typeof LiquidationsResponseSchema>;
