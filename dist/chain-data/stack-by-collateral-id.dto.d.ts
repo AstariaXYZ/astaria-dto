@@ -316,4 +316,5 @@ export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
         } | undefined);
     };
 }>, "many">;
-export type StackByCollateralIdResponse = z.infer<typeof StackByCollateralIdResponseSchema>;
+export type StackByCollateralIdResponse = z.input<typeof StackByCollateralIdResponseSchema>;
+export type StackByCollateralIdParsedResponse = z.infer<typeof StackByCollateralIdResponseSchema>;

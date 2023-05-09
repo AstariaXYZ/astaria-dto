@@ -9,4 +9,5 @@ export const ProofByHashResponseSchema = z.object({
   typedData: TypedDataSchema,
 });
 
-export type ProofByHashResponse = z.infer<typeof ProofByHashResponseSchema>;
+export type ProofByHashResponse = z.input<typeof ProofByHashResponseSchema>;
+export type ProofByHashParsedResponse = z.infer<typeof ProofByHashResponseSchema>;

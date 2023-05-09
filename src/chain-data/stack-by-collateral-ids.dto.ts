@@ -9,6 +9,10 @@ export const StackByCollateralIdsResponseSchema = z.array(
   })
 );
 
-export type StackByCollateralIdsResponse = z.infer<
+
+export type StackByCollateralIdsResponse = z.input<
+  typeof StackByCollateralIdsResponseSchema
+>;
+export type StackByCollateralIdsParsedResponse = z.infer<
   typeof StackByCollateralIdsResponseSchema
 >;

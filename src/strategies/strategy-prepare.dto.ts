@@ -18,6 +18,10 @@ export type StrategyPrepareRequest = z.infer<
   typeof StrategyPrepareRequestSchema
 >;
 
-export type StrategyPrepareResponse = z.infer<
+export type StrategyPrepareResponse = z.input<
+  typeof StrategyPrepareResponseSchema
+>;
+
+export type StrategyPrepareParsedResponse = z.infer<
   typeof StrategyPrepareResponseSchema
 >;

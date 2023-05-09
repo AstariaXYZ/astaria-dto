@@ -209,4 +209,5 @@ export declare const VaultResponseSchema: z.ZodObject<{
     profile?: string | undefined;
 }>;
 export type WithdrawBalance = z.infer<typeof WithdrawBalanceSchema>;
-export type VaultResponse = z.infer<typeof VaultResponseSchema>;
+export type VaultResponse = z.input<typeof VaultResponseSchema>;
+export type VaultParsedResponse = z.infer<typeof VaultResponseSchema>;

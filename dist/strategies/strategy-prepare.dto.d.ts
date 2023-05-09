@@ -20,4 +20,5 @@ export declare const StrategyPrepareResponseSchema: z.ZodObject<{
     presignedUrl: string;
 }>;
 export type StrategyPrepareRequest = z.infer<typeof StrategyPrepareRequestSchema>;
-export type StrategyPrepareResponse = z.infer<typeof StrategyPrepareResponseSchema>;
+export type StrategyPrepareResponse = z.input<typeof StrategyPrepareResponseSchema>;
+export type StrategyPrepareParsedResponse = z.infer<typeof StrategyPrepareResponseSchema>;

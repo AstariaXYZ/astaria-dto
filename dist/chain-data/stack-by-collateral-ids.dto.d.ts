@@ -428,4 +428,5 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
         };
     }[];
 }>, "many">;
-export type StackByCollateralIdsResponse = z.infer<typeof StackByCollateralIdsResponseSchema>;
+export type StackByCollateralIdsResponse = z.input<typeof StackByCollateralIdsResponseSchema>;
+export type StackByCollateralIdsParsedResponse = z.infer<typeof StackByCollateralIdsResponseSchema>;

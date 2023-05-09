@@ -15,4 +15,5 @@ export declare const LienTokensByOwnerResponseSchema: z.ZodArray<z.ZodEffects<z.
     hex: string;
     type: "BigNumber";
 }>, "many">;
-export type LienTokensByOwnerResponse = z.infer<typeof LienTokensByOwnerResponseSchema>;
+export type LienTokensByOwnerResponse = z.input<typeof LienTokensByOwnerResponseSchema>;
+export type LienTokensByOwnerParsedResponse = z.infer<typeof LienTokensByOwnerResponseSchema>;

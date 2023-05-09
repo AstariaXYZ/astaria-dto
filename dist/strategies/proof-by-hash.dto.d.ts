@@ -211,4 +211,5 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         };
     };
 }>;
-export type ProofByHashResponse = z.infer<typeof ProofByHashResponseSchema>;
+export type ProofByHashResponse = z.input<typeof ProofByHashResponseSchema>;
+export type ProofByHashParsedResponse = z.infer<typeof ProofByHashResponseSchema>;

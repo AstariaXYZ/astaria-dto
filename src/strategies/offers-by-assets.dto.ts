@@ -1,6 +1,6 @@
 import { Uint256Schema, AddressSchema } from "@astariaxyz/sdk";
 import { OfferSchema } from "./common/offer";
-import {z} from "zod";
+import { z } from "zod";
 
 export const AssetSchema = z.object({
   collectionAddress: AddressSchema,
@@ -17,8 +17,10 @@ export const OffersByAssetsResponseSchema = z.object({
   count: z.number().int().min(0).max(100),
 });
 
-export type Asset = z.infer<typeof AssetSchema>;
+export type Asset = z.input<typeof AssetSchema>;
 export type OffersByAssetsRequest = z.infer<typeof OffersByAssetsRequestSchema>;
-export type OffersByAssetsResponse = z.infer<
+
+export type OffersByAssetsResponse = z.input<
   typeof OffersByAssetsResponseSchema
 >;
+export type OffersByAssetsParsedRequest = z.infer<typeof OffersByAssetsRequestSchema>;

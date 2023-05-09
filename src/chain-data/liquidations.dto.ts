@@ -14,4 +14,5 @@ export const LiquidationsResponseSchema = z.object({
 });
 
 export type Liquidation = z.infer<typeof Liquidation>;
-export type LiquidationsResponse = z.infer<typeof LiquidationsResponseSchema>;
+export type LiquidationsResponse = z.input<typeof LiquidationsResponseSchema>;
+export type LiquidationsParsedResponse = z.infer<typeof LiquidationsResponseSchema>;

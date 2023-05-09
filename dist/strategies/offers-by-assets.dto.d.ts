@@ -402,6 +402,7 @@ export declare const OffersByAssetsResponseSchema: z.ZodObject<{
     }[];
     count: number;
 }>;
-export type Asset = z.infer<typeof AssetSchema>;
+export type Asset = z.input<typeof AssetSchema>;
 export type OffersByAssetsRequest = z.infer<typeof OffersByAssetsRequestSchema>;
-export type OffersByAssetsResponse = z.infer<typeof OffersByAssetsResponseSchema>;
+export type OffersByAssetsResponse = z.input<typeof OffersByAssetsResponseSchema>;
+export type OffersByAssetsParsedRequest = z.infer<typeof OffersByAssetsRequestSchema>;

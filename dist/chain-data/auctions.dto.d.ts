@@ -1351,7 +1351,8 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
     count: number;
 }>;
 export type Auction = z.infer<typeof AuctionSchema>;
-export type AuctionsResponse = z.infer<typeof AuctionsResponseSchema>;
 export type SeaportOrderParams = z.infer<typeof SeaportOrderParamsSchema>;
 export type SeaportConsiderationItem = z.infer<typeof SeaportConsiderationItemSchema>;
 export type SeaportOfferItem = z.infer<typeof SeaportOfferItemSchema>;
+export type AuctionsResponse = z.input<typeof AuctionsResponseSchema>;
+export type AuctionsParsedResponse = z.infer<typeof AuctionsResponseSchema>;

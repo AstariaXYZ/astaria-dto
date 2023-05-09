@@ -969,4 +969,5 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
     }[];
 }>;
 export type Liquidation = z.infer<typeof Liquidation>;
-export type LiquidationsResponse = z.infer<typeof LiquidationsResponseSchema>;
+export type LiquidationsResponse = z.input<typeof LiquidationsResponseSchema>;
+export type LiquidationsParsedResponse = z.infer<typeof LiquidationsResponseSchema>;
