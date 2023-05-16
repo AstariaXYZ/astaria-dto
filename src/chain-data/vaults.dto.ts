@@ -29,11 +29,11 @@ export const VaultResponseSchema = z.object({
   profile: z.string().optional(),
 });
 
-const VaultsDisplayParamsSchema = z.object({
+export const VaultsDisplayParamsSchema = z.object({
   balances: AddressSchema.optional(),
 });
 
-const VaultsQueryParamsSchema = z.object({
+export const VaultsQueryParamsSchema = z.object({
   filter: z.object({
     lp: AddressSchema.optional(),
     auth: AddressSchema.optional(),
@@ -47,9 +47,10 @@ const VaultsQueryParamsSchema = z.object({
   display: VaultsDisplayParamsSchema.optional(),
 }).merge(PaginationParamsSchema);
 
-const VaultQueryParamsSchema = z.object({
+export const VaultQueryParamsSchema = z.object({
   display: VaultsDisplayParamsSchema.optional(),
 });
+
 
 export const VaultsResponseSchema = z.object({
   results: z.array(VaultResponseSchema),
