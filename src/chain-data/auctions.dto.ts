@@ -69,6 +69,5 @@ export type SeaportConsiderationItem = z.infer<
 >;
 export type SeaportOfferItem = z.infer<typeof SeaportOfferItemSchema>;
 
-
 export type AuctionsResponse = z.input<typeof AuctionsResponseSchema>;
 export type AuctionsParsedResponse = z.infer<typeof AuctionsResponseSchema>;

@@ -7,4 +7,6 @@ export const OffersByAssetResponseSchema = z.object({
 });
 
 export type OffersByAssetResponse = z.input<typeof OffersByAssetResponseSchema>;
-export type OffersByAssetParsedResponse = z.infer<typeof OffersByAssetResponseSchema>;
+export type OffersByAssetParsedResponse = z.infer<
+  typeof OffersByAssetResponseSchema
+>;
