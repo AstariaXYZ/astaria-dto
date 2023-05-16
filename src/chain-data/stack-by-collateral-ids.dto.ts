@@ -9,7 +9,6 @@ export const StackByCollateralIdsResponseSchema = z.array(
   })
 );
 
-
 export type StackByCollateralIdsResponse = z.input<
   typeof StackByCollateralIdsResponseSchema
 >;

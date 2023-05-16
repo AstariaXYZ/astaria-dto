@@ -1,4 +1,4 @@
-import {z} from "zod";
+import { z } from "zod";
 import { Uint256Schema } from "@astariaxyz/sdk";
 import { StackSlotSchema } from "./common/stack-slot";
 
@@ -15,4 +15,6 @@ export const LiquidationsResponseSchema = z.object({
 
 export type Liquidation = z.infer<typeof Liquidation>;
 export type LiquidationsResponse = z.input<typeof LiquidationsResponseSchema>;
-export type LiquidationsParsedResponse = z.infer<typeof LiquidationsResponseSchema>;
+export type LiquidationsParsedResponse = z.infer<
+  typeof LiquidationsResponseSchema
+>;

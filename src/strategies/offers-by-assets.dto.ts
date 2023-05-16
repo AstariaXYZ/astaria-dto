@@ -22,8 +22,9 @@ export type ParsedAsset = z.infer<typeof AssetSchema>;
 
 export type OffersByAssetsRequest = z.infer<typeof OffersByAssetsRequestSchema>;
 
-
 export type OffersByAssetsResponse = z.input<
   typeof OffersByAssetsResponseSchema
 >;
-export type OffersByAssetsParsedResponse = z.infer<typeof OffersByAssetsResponseSchema>;
+export type OffersByAssetsParsedResponse = z.infer<
+  typeof OffersByAssetsResponseSchema
+>;
