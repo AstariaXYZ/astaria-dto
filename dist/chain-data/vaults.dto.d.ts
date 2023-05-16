@@ -208,7 +208,14 @@ export declare const VaultResponseSchema: z.ZodObject<{
     banner?: string | undefined;
     profile?: string | undefined;
 }>;
-declare const VaultsQueryParamsSchema: z.ZodObject<{
+export declare const VaultsDisplayParamsSchema: z.ZodObject<{
+    balances: z.ZodOptional<z.ZodString>;
+}, "strip", z.ZodTypeAny, {
+    balances?: string | undefined;
+}, {
+    balances?: string | undefined;
+}>;
+export declare const VaultsQueryParamsSchema: z.ZodObject<{
     filter: z.ZodOptional<z.ZodObject<{
         lp: z.ZodOptional<z.ZodString>;
         auth: z.ZodOptional<z.ZodString>;
@@ -267,7 +274,7 @@ declare const VaultsQueryParamsSchema: z.ZodObject<{
     skip?: number | undefined;
     limit?: number | undefined;
 }>;
-declare const VaultQueryParamsSchema: z.ZodObject<{
+export declare const VaultQueryParamsSchema: z.ZodObject<{
     display: z.ZodOptional<z.ZodObject<{
         balances: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
@@ -503,4 +510,3 @@ export type VaultsParsedResponse = z.infer<typeof VaultsResponseSchema>;
 export type VaultQueryParams = z.input<typeof VaultQueryParamsSchema>;
 export type VaultResponse = z.input<typeof VaultResponseSchema>;
 export type VaultParsedResponse = z.infer<typeof VaultResponseSchema>;
-export {};
