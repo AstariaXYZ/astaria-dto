@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { AddressSchema, HexSchema, Uint256Schema } from "@astariaxyz/sdk";
+import { PaginationParamsSchema } from "../common";
 export var VaultType;
 (function (VaultType) {
     VaultType["Solo"] = "1";
@@ -24,6 +25,25 @@ export const VaultResponseSchema = z.object({
     thesis: z.string().optional(),
     banner: z.string().optional(),
     profile: z.string().optional(),
+});
+const VaultsDisplayParamsSchema = z.object({
+    balances: AddressSchema.optional(),
+});
+const VaultsQueryParamsSchema = z.object({
+    filter: z.object({
+        lp: AddressSchema.optional(),
+        auth: AddressSchema.optional(),
+        verified: z.boolean().optional(),
+    })
+        .optional(),
+    include: z.object({
+        shutdown: z.boolean().optional(),
+    })
+        .optional(),
+    display: VaultsDisplayParamsSchema.optional(),
+}).merge(PaginationParamsSchema);
+const VaultQueryParamsSchema = z.object({
+    display: VaultsDisplayParamsSchema.optional(),
 });
 export const VaultsResponseSchema = z.object({
     results: z.array(VaultResponseSchema),
