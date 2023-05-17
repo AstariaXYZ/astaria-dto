@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
-export const BoolParamSchema = z.string()
+export const BoolParamSchema = z.string().toLowerCase()
   .optional()
-  .transform((v) => v == '' || v == 'true' || '1');
+  .transform((v) =>
+    ['true', '1', ''].find((i) => i === v) ? true : false
+  );

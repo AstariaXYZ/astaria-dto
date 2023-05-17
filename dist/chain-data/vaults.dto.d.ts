@@ -221,13 +221,13 @@ export declare const VaultResponseSchema: z.ZodObject<{
 export declare const VaultsQueryParamsSchemaOld: z.ZodObject<{
     lp: z.ZodOptional<z.ZodString>;
     auth: z.ZodOptional<z.ZodString>;
-    verified: z.ZodEffects<z.ZodOptional<z.ZodString>, true | "1", string | undefined>;
+    verified: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     skip: z.ZodDefault<z.ZodNumber>;
     limit: z.ZodDefault<z.ZodNumber>;
 }, "strip", z.ZodTypeAny, {
     skip: number;
     limit: number;
-    verified: true | "1";
+    verified: boolean;
     lp?: string | undefined;
     auth?: string | undefined;
 }, {
@@ -240,11 +240,11 @@ export declare const VaultsQueryParamsSchemaOld: z.ZodObject<{
 export declare const VaultsQueryParamsSchema: z.ZodObject<{
     filter: z.ZodDefault<z.ZodObject<{
         auth: z.ZodOptional<z.ZodString>;
-        verified: z.ZodEffects<z.ZodOptional<z.ZodString>, true | "1", string | undefined>;
-        lp: z.ZodEffects<z.ZodOptional<z.ZodString>, true | "1", string | undefined>;
+        verified: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
+        lp: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
-        lp: true | "1";
-        verified: true | "1";
+        lp: boolean;
+        verified: boolean;
         auth?: string | undefined;
     }, {
         auth?: string | undefined;
@@ -253,16 +253,16 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
     }>>;
     lp: z.ZodOptional<z.ZodString>;
     include: z.ZodDefault<z.ZodObject<{
-        shutdown: z.ZodEffects<z.ZodOptional<z.ZodString>, true | "1", string | undefined>;
+        shutdown: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
-        shutdown: true | "1";
+        shutdown: boolean;
     }, {
         shutdown?: string | undefined;
     }>>;
     display: z.ZodDefault<z.ZodObject<{
-        lp: z.ZodEffects<z.ZodOptional<z.ZodString>, true | "1", string | undefined>;
+        lp: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
-        lp: true | "1";
+        lp: boolean;
     }, {
         lp?: string | undefined;
     }>>;
@@ -270,17 +270,17 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
     limit: z.ZodDefault<z.ZodNumber>;
 }, "strip", z.ZodTypeAny, {
     filter: {
-        lp: true | "1";
-        verified: true | "1";
+        lp: boolean;
+        verified: boolean;
         auth?: string | undefined;
     };
     skip: number;
     limit: number;
     include: {
-        shutdown: true | "1";
+        shutdown: boolean;
     };
     display: {
-        lp: true | "1";
+        lp: boolean;
     };
     lp?: string | undefined;
 }, {
