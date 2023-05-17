@@ -34,19 +34,41 @@ export const VaultResponseSchema = z.object({
   profile: z.string().optional(),
 });
 
+
+export const VaultsQueryParamsSchemaOld = z.object({
+
+  lp: AddressSchema.optional(),
+
+  auth: AddressSchema.optional(),
+
+  verified: z.boolean().default(false),
+
+}).merge(PaginationParamsSchema);
+
 export const VaultsQueryParamsSchema = z.object({
+
+  lp: AddressSchema.optional(),
+
   filter: z.object({
+
     auth: AddressSchema.optional(),
+
     verified: z.boolean().default(false),
+
     lp: z.boolean().default(false),
+
   }).default({}),
 
   include: z.object({
+
     shutdown: z.boolean().default(false),
+
   }).default({}),
 
   display: z.object({
+
     lp: z.boolean().default(false),
+
   }).default({}),
 
 }).merge(PaginationParamsSchema);
@@ -61,6 +83,7 @@ export const VaultsResponseSchema = z.object({
 export type WithdrawBalance = z.infer<typeof WithdrawBalanceSchema>;
 
 export type VaultsQueryParams = z.input<typeof VaultsQueryParamsSchema>;
+export type VaultsQueryParamsOld = z.input<typeof VaultsQueryParamsSchemaOld>;
 export type VaultsResponse = z.input<typeof VaultsResponseSchema>;
 export type VaultsParsedResponse = z.infer<typeof VaultsResponseSchema>;
 
