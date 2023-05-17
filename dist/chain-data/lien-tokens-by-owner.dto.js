@@ -1,5 +1,7 @@
-import { Uint256Schema } from "@astariaxyz/sdk";
-import { z } from "zod";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LienTokensByOwnerResponseSchema = void 0;
+var sdk_1 = require("@astariaxyz/sdk");
+var zod_1 = require("zod");
 //Returns array of lien ids
-export const LienTokensByOwnerResponseSchema = z.array(Uint256Schema);
-//# sourceMappingURL=lien-tokens-by-owner.dto.js.map
+exports.LienTokensByOwnerResponseSchema = zod_1.z.array(sdk_1.Uint256Schema);

@@ -1,13 +1,15 @@
-import { z } from "zod";
-import { Uint256Schema, LienSchema } from "@astariaxyz/sdk";
-export const PointSchema = z.object({
-    amount: Uint256Schema,
-    end: Uint256Schema,
-    start: Uint256Schema,
-    lienId: Uint256Schema,
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StackSlotSchema = exports.PointSchema = void 0;
+var zod_1 = require("zod");
+var sdk_1 = require("@astariaxyz/sdk");
+exports.PointSchema = zod_1.z.object({
+    amount: sdk_1.Uint256Schema,
+    end: sdk_1.Uint256Schema,
+    start: sdk_1.Uint256Schema,
+    lienId: sdk_1.Uint256Schema,
 });
-export const StackSlotSchema = z.object({
-    lien: LienSchema,
-    point: PointSchema,
+exports.StackSlotSchema = zod_1.z.object({
+    lien: sdk_1.LienSchema,
+    point: exports.PointSchema,
 });
-//# sourceMappingURL=stack-slot.js.map
