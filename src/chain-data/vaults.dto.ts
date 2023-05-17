@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { AddressSchema, HexSchema, Uint256Schema } from "@astariaxyz/sdk";
-import { PaginationParamsSchema } from "../common";
+import { PaginationParamsSchema, BoolParamSchema } from "../common";
 
 export enum VaultType {
   Solo = "1",
@@ -22,16 +22,17 @@ export const VaultResponseSchema = z.object({
   vault: AddressSchema,
   vaultBalance: Uint256Schema,//Actually vault shares
   vaultType: z.nativeEnum(VaultType),
-  //balances returned if lp is passed
+
   depositBalance: Uint256Schema.optional(),
   withdrawBalances: z.array(WithdrawBalanceSchema).optional(),
   //off-chain data
-  isVerified: z.boolean(),
   name: z.string(),
   description: z.string().optional(),
   thesis: z.string().optional(),
   banner: z.string().optional(),
   profile: z.string().optional(),
+  strategistName: z.string().optional(),
+  isVerified: z.boolean().optional(),
 });
 
 
@@ -41,7 +42,7 @@ export const VaultsQueryParamsSchemaOld = z.object({
 
   auth: AddressSchema.optional(),
 
-  verified: z.boolean().default(false),
+  verified: BoolParamSchema,
 
 }).merge(PaginationParamsSchema);
 
@@ -53,21 +54,21 @@ export const VaultsQueryParamsSchema = z.object({
 
     auth: AddressSchema.optional(),
 
-    verified: z.boolean().default(false),
+    verified: BoolParamSchema,
 
-    lp: z.boolean().default(false),
+    lp: BoolParamSchema,
 
   }).default({}),
 
   include: z.object({
 
-    shutdown: z.boolean().default(false),
+    shutdown: BoolParamSchema,
 
   }).default({}),
 
   display: z.object({
 
-    lp: z.boolean().default(false),
+    lp: BoolParamSchema,
 
   }).default({}),
 
