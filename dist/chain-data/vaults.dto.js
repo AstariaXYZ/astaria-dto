@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VaultsResponseSchema = exports.VaultsQueryParamsSchema = exports.VaultResponseSchema = exports.WithdrawBalanceSchema = exports.VaultQueryParamsSchema = exports.VaultType = void 0;
+exports.VaultsResponseSchema = exports.VaultsQueryParamsSchema = exports.VaultsQueryParamsSchemaOld = exports.VaultResponseSchema = exports.WithdrawBalanceSchema = exports.VaultQueryParamsSchema = exports.VaultType = void 0;
 var zod_1 = require("zod");
 var sdk_1 = require("@astariaxyz/sdk");
 var common_1 = require("../common");
@@ -32,7 +32,13 @@ exports.VaultResponseSchema = zod_1.z.object({
     banner: zod_1.z.string().optional(),
     profile: zod_1.z.string().optional(),
 });
+exports.VaultsQueryParamsSchemaOld = zod_1.z.object({
+    lp: sdk_1.AddressSchema.optional(),
+    auth: sdk_1.AddressSchema.optional(),
+    verified: zod_1.z.boolean().default(false),
+}).merge(common_1.PaginationParamsSchema);
 exports.VaultsQueryParamsSchema = zod_1.z.object({
+    lp: sdk_1.AddressSchema.optional(),
     filter: zod_1.z.object({
         auth: sdk_1.AddressSchema.optional(),
         verified: zod_1.z.boolean().default(false),
