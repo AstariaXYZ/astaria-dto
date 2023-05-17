@@ -1,7 +1,9 @@
-import { z } from "zod";
-import { OfferSchema } from "./common/offer";
-export const OffersByAssetResponseSchema = z.object({
-    results: z.array(OfferSchema),
-    count: z.number().int().min(0).max(100),
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OffersByAssetResponseSchema = void 0;
+var zod_1 = require("zod");
+var offer_1 = require("./common/offer");
+exports.OffersByAssetResponseSchema = zod_1.z.object({
+    results: zod_1.z.array(offer_1.OfferSchema),
+    count: zod_1.z.number().int().min(0).max(100),
 });
-//# sourceMappingURL=offers-by-asset.dto.js.map

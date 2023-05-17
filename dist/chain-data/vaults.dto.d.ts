@@ -3,6 +3,13 @@ export declare enum VaultType {
     Solo = "1",
     Public = "2"
 }
+export declare const VaultQueryParamsSchema: z.ZodObject<{
+    lp: z.ZodOptional<z.ZodString>;
+}, "strip", z.ZodTypeAny, {
+    lp?: string | undefined;
+}, {
+    lp?: string | undefined;
+}>;
 export declare const WithdrawBalanceSchema: z.ZodObject<{
     balance: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
         hex: z.ZodString;
@@ -208,88 +215,64 @@ export declare const VaultResponseSchema: z.ZodObject<{
     banner?: string | undefined;
     profile?: string | undefined;
 }>;
-export declare const VaultsDisplayParamsSchema: z.ZodObject<{
-    balances: z.ZodOptional<z.ZodString>;
-}, "strip", z.ZodTypeAny, {
-    balances?: string | undefined;
-}, {
-    balances?: string | undefined;
-}>;
 export declare const VaultsQueryParamsSchema: z.ZodObject<{
-    filter: z.ZodOptional<z.ZodObject<{
-        lp: z.ZodOptional<z.ZodString>;
+    filter: z.ZodDefault<z.ZodObject<{
         auth: z.ZodOptional<z.ZodString>;
-        verified: z.ZodOptional<z.ZodBoolean>;
+        verified: z.ZodDefault<z.ZodBoolean>;
+        lp: z.ZodDefault<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
-        lp?: string | undefined;
+        lp: boolean;
+        verified: boolean;
+        auth?: string | undefined;
+    }, {
         auth?: string | undefined;
         verified?: boolean | undefined;
-    }, {
-        lp?: string | undefined;
-        auth?: string | undefined;
-        verified?: boolean | undefined;
+        lp?: boolean | undefined;
     }>>;
-    include: z.ZodOptional<z.ZodObject<{
-        shutdown: z.ZodOptional<z.ZodBoolean>;
+    include: z.ZodDefault<z.ZodObject<{
+        shutdown: z.ZodDefault<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
-        shutdown?: boolean | undefined;
+        shutdown: boolean;
     }, {
         shutdown?: boolean | undefined;
     }>>;
-    display: z.ZodOptional<z.ZodObject<{
-        balances: z.ZodOptional<z.ZodString>;
+    display: z.ZodDefault<z.ZodObject<{
+        lp: z.ZodDefault<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
-        balances?: string | undefined;
+        lp: boolean;
     }, {
-        balances?: string | undefined;
+        lp?: boolean | undefined;
     }>>;
     skip: z.ZodDefault<z.ZodNumber>;
     limit: z.ZodDefault<z.ZodNumber>;
 }, "strip", z.ZodTypeAny, {
+    filter: {
+        lp: boolean;
+        verified: boolean;
+        auth?: string | undefined;
+    };
     skip: number;
     limit: number;
-    filter?: {
-        lp?: string | undefined;
-        auth?: string | undefined;
-        verified?: boolean | undefined;
-    } | undefined;
-    include?: {
-        shutdown?: boolean | undefined;
-    } | undefined;
-    display?: {
-        balances?: string | undefined;
-    } | undefined;
+    include: {
+        shutdown: boolean;
+    };
+    display: {
+        lp: boolean;
+    };
 }, {
     filter?: {
-        lp?: string | undefined;
         auth?: string | undefined;
         verified?: boolean | undefined;
+        lp?: boolean | undefined;
     } | undefined;
     include?: {
         shutdown?: boolean | undefined;
     } | undefined;
     display?: {
-        balances?: string | undefined;
+        lp?: boolean | undefined;
     } | undefined;
     skip?: number | undefined;
     limit?: number | undefined;
-}>;
-export declare const VaultQueryParamsSchema: z.ZodObject<{
-    display: z.ZodOptional<z.ZodObject<{
-        balances: z.ZodOptional<z.ZodString>;
-    }, "strip", z.ZodTypeAny, {
-        balances?: string | undefined;
-    }, {
-        balances?: string | undefined;
-    }>>;
-}, "strip", z.ZodTypeAny, {
-    display?: {
-        balances?: string | undefined;
-    } | undefined;
-}, {
-    display?: {
-        balances?: string | undefined;
-    } | undefined;
 }>;
 export declare const VaultsResponseSchema: z.ZodObject<{
     results: z.ZodArray<z.ZodObject<{

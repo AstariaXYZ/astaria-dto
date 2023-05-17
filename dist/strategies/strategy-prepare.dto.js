@@ -1,12 +1,14 @@
-import * as z from "zod";
-import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
-import { CidSchema } from "../common/cid";
-export const StrategyPrepareRequestSchema = z.object({
-    delegateAddress: AddressSchema,
-    signature: HexSchema,
-    cid: CidSchema,
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StrategyPrepareResponseSchema = exports.StrategyPrepareRequestSchema = void 0;
+var z = require("zod");
+var sdk_1 = require("@astariaxyz/sdk");
+var cid_1 = require("../common/cid");
+exports.StrategyPrepareRequestSchema = z.object({
+    delegateAddress: sdk_1.AddressSchema,
+    signature: sdk_1.HexSchema,
+    cid: cid_1.CidSchema,
 });
-export const StrategyPrepareResponseSchema = z.object({
+exports.StrategyPrepareResponseSchema = z.object({
     presignedUrl: z.string().url(),
 });
-//# sourceMappingURL=strategy-prepare.dto.js.map
