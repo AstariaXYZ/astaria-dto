@@ -215,6 +215,25 @@ export declare const VaultResponseSchema: z.ZodObject<{
     banner?: string | undefined;
     profile?: string | undefined;
 }>;
+export declare const VaultsQueryParamsSchemaOld: z.ZodObject<{
+    lp: z.ZodOptional<z.ZodString>;
+    auth: z.ZodOptional<z.ZodString>;
+    verified: z.ZodDefault<z.ZodBoolean>;
+    skip: z.ZodDefault<z.ZodNumber>;
+    limit: z.ZodDefault<z.ZodNumber>;
+}, "strip", z.ZodTypeAny, {
+    skip: number;
+    limit: number;
+    verified: boolean;
+    lp?: string | undefined;
+    auth?: string | undefined;
+}, {
+    lp?: string | undefined;
+    auth?: string | undefined;
+    verified?: boolean | undefined;
+    skip?: number | undefined;
+    limit?: number | undefined;
+}>;
 export declare const VaultsQueryParamsSchema: z.ZodObject<{
     filter: z.ZodDefault<z.ZodObject<{
         auth: z.ZodOptional<z.ZodString>;
@@ -229,6 +248,7 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
         verified?: boolean | undefined;
         lp?: boolean | undefined;
     }>>;
+    lp: z.ZodOptional<z.ZodString>;
     include: z.ZodDefault<z.ZodObject<{
         shutdown: z.ZodDefault<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
@@ -259,12 +279,14 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
     display: {
         lp: boolean;
     };
+    lp?: string | undefined;
 }, {
     filter?: {
         auth?: string | undefined;
         verified?: boolean | undefined;
         lp?: boolean | undefined;
     } | undefined;
+    lp?: string | undefined;
     include?: {
         shutdown?: boolean | undefined;
     } | undefined;
@@ -488,6 +510,7 @@ export declare const VaultsResponseSchema: z.ZodObject<{
 }>;
 export type WithdrawBalance = z.infer<typeof WithdrawBalanceSchema>;
 export type VaultsQueryParams = z.input<typeof VaultsQueryParamsSchema>;
+export type VaultsQueryParamsOld = z.input<typeof VaultsQueryParamsSchemaOld>;
 export type VaultsResponse = z.input<typeof VaultsResponseSchema>;
 export type VaultsParsedResponse = z.infer<typeof VaultsResponseSchema>;
 export type VaultQueryParams = z.input<typeof VaultQueryParamsSchema>;
