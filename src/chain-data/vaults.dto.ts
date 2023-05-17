@@ -7,11 +7,16 @@ export enum VaultType {
   Public = "2",
 }
 
+export const VaultQueryParamsSchema = z.object({
+  lp: AddressSchema.optional(),
+});
+
 export const WithdrawBalanceSchema = z.object({
   balance: Uint256Schema,
   epoch: Uint256Schema,
   withdrawProxy: HexSchema,
 });
+
 
 export const VaultResponseSchema = z.object({
   vault: AddressSchema,
@@ -29,27 +34,22 @@ export const VaultResponseSchema = z.object({
   profile: z.string().optional(),
 });
 
-export const VaultsDisplayParamsSchema = z.object({
-  balances: AddressSchema.optional(),
-});
-
 export const VaultsQueryParamsSchema = z.object({
   filter: z.object({
-    lp: AddressSchema.optional(),
     auth: AddressSchema.optional(),
-    verified: z.boolean().optional(),
-  })
-    .optional(),
-  include: z.object({
-    shutdown: z.boolean().optional(),
-  })
-    .optional(),
-  display: VaultsDisplayParamsSchema.optional(),
-}).merge(PaginationParamsSchema);
+    verified: z.boolean().default(false),
+    lp: z.boolean().default(false),
+  }).default({}),
 
-export const VaultQueryParamsSchema = z.object({
-  display: VaultsDisplayParamsSchema.optional(),
-});
+  include: z.object({
+    shutdown: z.boolean().default(false),
+  }).default({}),
+
+  display: z.object({
+    lp: z.boolean().default(false),
+  }).default({}),
+
+}).merge(PaginationParamsSchema);
 
 
 export const VaultsResponseSchema = z.object({
