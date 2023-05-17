@@ -155,17 +155,17 @@ export declare const VaultResponseSchema: z.ZodObject<{
         } | undefined);
         withdrawProxy: string;
     }>, "many">>;
-    isVerified: z.ZodBoolean;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
     thesis: z.ZodOptional<z.ZodString>;
     banner: z.ZodOptional<z.ZodString>;
     profile: z.ZodOptional<z.ZodString>;
+    strategistName: z.ZodOptional<z.ZodString>;
+    isVerified: z.ZodOptional<z.ZodBoolean>;
 }, "strip", z.ZodTypeAny, {
     vault: string;
     vaultBalance: import("ethers").BigNumber;
     vaultType: VaultType;
-    isVerified: boolean;
     name: string;
     depositBalance?: import("ethers").BigNumber | undefined;
     withdrawBalances?: {
@@ -177,6 +177,8 @@ export declare const VaultResponseSchema: z.ZodObject<{
     thesis?: string | undefined;
     banner?: string | undefined;
     profile?: string | undefined;
+    strategistName?: string | undefined;
+    isVerified?: boolean | undefined;
 }, {
     vault: string;
     vaultBalance: (string | import("ethers").BigNumber | {
@@ -187,7 +189,6 @@ export declare const VaultResponseSchema: z.ZodObject<{
         type: "BigNumber";
     } | undefined);
     vaultType: VaultType;
-    isVerified: boolean;
     name: string;
     depositBalance?: string | import("ethers").BigNumber | {
         hex: string;
@@ -214,11 +215,13 @@ export declare const VaultResponseSchema: z.ZodObject<{
     thesis?: string | undefined;
     banner?: string | undefined;
     profile?: string | undefined;
+    strategistName?: string | undefined;
+    isVerified?: boolean | undefined;
 }>;
 export declare const VaultsQueryParamsSchemaOld: z.ZodObject<{
     lp: z.ZodOptional<z.ZodString>;
     auth: z.ZodOptional<z.ZodString>;
-    verified: z.ZodDefault<z.ZodBoolean>;
+    verified: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     skip: z.ZodDefault<z.ZodNumber>;
     limit: z.ZodDefault<z.ZodNumber>;
 }, "strip", z.ZodTypeAny, {
@@ -230,38 +233,38 @@ export declare const VaultsQueryParamsSchemaOld: z.ZodObject<{
 }, {
     lp?: string | undefined;
     auth?: string | undefined;
-    verified?: boolean | undefined;
+    verified?: string | undefined;
     skip?: number | undefined;
     limit?: number | undefined;
 }>;
 export declare const VaultsQueryParamsSchema: z.ZodObject<{
     filter: z.ZodDefault<z.ZodObject<{
         auth: z.ZodOptional<z.ZodString>;
-        verified: z.ZodDefault<z.ZodBoolean>;
-        lp: z.ZodDefault<z.ZodBoolean>;
+        verified: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
+        lp: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
         lp: boolean;
         verified: boolean;
         auth?: string | undefined;
     }, {
         auth?: string | undefined;
-        verified?: boolean | undefined;
-        lp?: boolean | undefined;
+        verified?: string | undefined;
+        lp?: string | undefined;
     }>>;
     lp: z.ZodOptional<z.ZodString>;
     include: z.ZodDefault<z.ZodObject<{
-        shutdown: z.ZodDefault<z.ZodBoolean>;
+        shutdown: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
         shutdown: boolean;
     }, {
-        shutdown?: boolean | undefined;
+        shutdown?: string | undefined;
     }>>;
     display: z.ZodDefault<z.ZodObject<{
-        lp: z.ZodDefault<z.ZodBoolean>;
+        lp: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
         lp: boolean;
     }, {
-        lp?: boolean | undefined;
+        lp?: string | undefined;
     }>>;
     skip: z.ZodDefault<z.ZodNumber>;
     limit: z.ZodDefault<z.ZodNumber>;
@@ -283,15 +286,15 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
 }, {
     filter?: {
         auth?: string | undefined;
-        verified?: boolean | undefined;
-        lp?: boolean | undefined;
+        verified?: string | undefined;
+        lp?: string | undefined;
     } | undefined;
     lp?: string | undefined;
     include?: {
-        shutdown?: boolean | undefined;
+        shutdown?: string | undefined;
     } | undefined;
     display?: {
-        lp?: boolean | undefined;
+        lp?: string | undefined;
     } | undefined;
     skip?: number | undefined;
     limit?: number | undefined;
@@ -387,17 +390,17 @@ export declare const VaultsResponseSchema: z.ZodObject<{
             } | undefined);
             withdrawProxy: string;
         }>, "many">>;
-        isVerified: z.ZodBoolean;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodString>;
         thesis: z.ZodOptional<z.ZodString>;
         banner: z.ZodOptional<z.ZodString>;
         profile: z.ZodOptional<z.ZodString>;
+        strategistName: z.ZodOptional<z.ZodString>;
+        isVerified: z.ZodOptional<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
         vault: string;
         vaultBalance: import("ethers").BigNumber;
         vaultType: VaultType;
-        isVerified: boolean;
         name: string;
         depositBalance?: import("ethers").BigNumber | undefined;
         withdrawBalances?: {
@@ -409,6 +412,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         thesis?: string | undefined;
         banner?: string | undefined;
         profile?: string | undefined;
+        strategistName?: string | undefined;
+        isVerified?: boolean | undefined;
     }, {
         vault: string;
         vaultBalance: (string | import("ethers").BigNumber | {
@@ -419,7 +424,6 @@ export declare const VaultsResponseSchema: z.ZodObject<{
             type: "BigNumber";
         } | undefined);
         vaultType: VaultType;
-        isVerified: boolean;
         name: string;
         depositBalance?: string | import("ethers").BigNumber | {
             hex: string;
@@ -446,6 +450,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         thesis?: string | undefined;
         banner?: string | undefined;
         profile?: string | undefined;
+        strategistName?: string | undefined;
+        isVerified?: boolean | undefined;
     }>, "many">;
     count: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
@@ -453,7 +459,6 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         vault: string;
         vaultBalance: import("ethers").BigNumber;
         vaultType: VaultType;
-        isVerified: boolean;
         name: string;
         depositBalance?: import("ethers").BigNumber | undefined;
         withdrawBalances?: {
@@ -465,6 +470,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         thesis?: string | undefined;
         banner?: string | undefined;
         profile?: string | undefined;
+        strategistName?: string | undefined;
+        isVerified?: boolean | undefined;
     }[];
     count: number;
 }, {
@@ -478,7 +485,6 @@ export declare const VaultsResponseSchema: z.ZodObject<{
             type: "BigNumber";
         } | undefined);
         vaultType: VaultType;
-        isVerified: boolean;
         name: string;
         depositBalance?: string | import("ethers").BigNumber | {
             hex: string;
@@ -505,6 +511,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         thesis?: string | undefined;
         banner?: string | undefined;
         profile?: string | undefined;
+        strategistName?: string | undefined;
+        isVerified?: boolean | undefined;
     }[];
     count: number;
 }>;

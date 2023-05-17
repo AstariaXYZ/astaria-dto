@@ -21,34 +21,34 @@ exports.VaultResponseSchema = zod_1.z.object({
     vault: sdk_1.AddressSchema,
     vaultBalance: sdk_1.Uint256Schema,
     vaultType: zod_1.z.nativeEnum(VaultType),
-    //balances returned if lp is passed
     depositBalance: sdk_1.Uint256Schema.optional(),
     withdrawBalances: zod_1.z.array(exports.WithdrawBalanceSchema).optional(),
     //off-chain data
-    isVerified: zod_1.z.boolean(),
     name: zod_1.z.string(),
     description: zod_1.z.string().optional(),
     thesis: zod_1.z.string().optional(),
     banner: zod_1.z.string().optional(),
     profile: zod_1.z.string().optional(),
+    strategistName: zod_1.z.string().optional(),
+    isVerified: zod_1.z.boolean().optional(),
 });
 exports.VaultsQueryParamsSchemaOld = zod_1.z.object({
     lp: sdk_1.AddressSchema.optional(),
     auth: sdk_1.AddressSchema.optional(),
-    verified: zod_1.z.boolean().default(false),
+    verified: common_1.BoolParamSchema,
 }).merge(common_1.PaginationParamsSchema);
 exports.VaultsQueryParamsSchema = zod_1.z.object({
     lp: sdk_1.AddressSchema.optional(),
     filter: zod_1.z.object({
         auth: sdk_1.AddressSchema.optional(),
-        verified: zod_1.z.boolean().default(false),
-        lp: zod_1.z.boolean().default(false),
+        verified: common_1.BoolParamSchema,
+        lp: common_1.BoolParamSchema,
     }).default({}),
     include: zod_1.z.object({
-        shutdown: zod_1.z.boolean().default(false),
+        shutdown: common_1.BoolParamSchema,
     }).default({}),
     display: zod_1.z.object({
-        lp: zod_1.z.boolean().default(false),
+        lp: common_1.BoolParamSchema,
     }).default({}),
 }).merge(common_1.PaginationParamsSchema);
 exports.VaultsResponseSchema = zod_1.z.object({
