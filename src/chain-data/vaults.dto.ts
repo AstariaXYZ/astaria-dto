@@ -22,7 +22,8 @@ export const VaultResponseSchema = z.object({
   vault: AddressSchema,
   vaultBalance: Uint256Schema,//Actually vault shares
   vaultType: z.nativeEnum(VaultType),
-
+  strategist: AddressSchema,
+  delegate: AddressSchema,
   depositBalance: Uint256Schema.optional(),
   withdrawBalances: z.array(WithdrawBalanceSchema).optional(),
   //off-chain data

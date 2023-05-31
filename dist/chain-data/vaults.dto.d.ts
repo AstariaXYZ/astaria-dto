@@ -84,6 +84,8 @@ export declare const VaultResponseSchema: z.ZodObject<{
         type: "BigNumber";
     }>;
     vaultType: z.ZodNativeEnum<typeof VaultType>;
+    strategist: z.ZodString;
+    delegate: z.ZodString;
     depositBalance: z.ZodOptional<z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
         hex: z.ZodString;
         type: z.ZodLiteral<"BigNumber">;
@@ -166,6 +168,8 @@ export declare const VaultResponseSchema: z.ZodObject<{
     vault: string;
     vaultBalance: import("ethers").BigNumber;
     vaultType: VaultType;
+    strategist: string;
+    delegate: string;
     name: string;
     depositBalance?: import("ethers").BigNumber | undefined;
     withdrawBalances?: {
@@ -189,6 +193,8 @@ export declare const VaultResponseSchema: z.ZodObject<{
         type: "BigNumber";
     } | undefined);
     vaultType: VaultType;
+    strategist: string;
+    delegate: string;
     name: string;
     depositBalance?: string | import("ethers").BigNumber | {
         hex: string;
@@ -319,6 +325,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
             type: "BigNumber";
         }>;
         vaultType: z.ZodNativeEnum<typeof VaultType>;
+        strategist: z.ZodString;
+        delegate: z.ZodString;
         depositBalance: z.ZodOptional<z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
             hex: z.ZodString;
             type: z.ZodLiteral<"BigNumber">;
@@ -401,6 +409,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         vault: string;
         vaultBalance: import("ethers").BigNumber;
         vaultType: VaultType;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: import("ethers").BigNumber | undefined;
         withdrawBalances?: {
@@ -424,6 +434,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
             type: "BigNumber";
         } | undefined);
         vaultType: VaultType;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: string | import("ethers").BigNumber | {
             hex: string;
@@ -459,6 +471,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         vault: string;
         vaultBalance: import("ethers").BigNumber;
         vaultType: VaultType;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: import("ethers").BigNumber | undefined;
         withdrawBalances?: {
@@ -485,6 +499,8 @@ export declare const VaultsResponseSchema: z.ZodObject<{
             type: "BigNumber";
         } | undefined);
         vaultType: VaultType;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: string | import("ethers").BigNumber | {
             hex: string;

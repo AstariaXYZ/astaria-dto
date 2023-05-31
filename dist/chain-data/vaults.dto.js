@@ -21,6 +21,8 @@ exports.VaultResponseSchema = zod_1.z.object({
     vault: sdk_1.AddressSchema,
     vaultBalance: sdk_1.Uint256Schema,
     vaultType: zod_1.z.nativeEnum(VaultType),
+    strategist: sdk_1.AddressSchema,
+    delegate: sdk_1.AddressSchema,
     depositBalance: sdk_1.Uint256Schema.optional(),
     withdrawBalances: zod_1.z.array(exports.WithdrawBalanceSchema).optional(),
     //off-chain data
