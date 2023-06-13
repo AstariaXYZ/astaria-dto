@@ -1,16 +1,16 @@
 import * as z from "zod";
 export declare const StrategyPrepareRequestSchema: z.ZodObject<{
-    delegateAddress: z.ZodString;
-    signature: z.ZodString;
+    delegateAddress: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    signature: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
     cid: z.ZodString;
 }, "strip", z.ZodTypeAny, {
     cid: string;
-    signature: string;
-    delegateAddress: string;
+    signature: `0x${string}`;
+    delegateAddress: `0x${string}`;
 }, {
     cid: string;
-    signature: string;
-    delegateAddress: string;
+    signature: `0x${string}`;
+    delegateAddress: `0x${string}`;
 }>;
 export declare const StrategyPrepareResponseSchema: z.ZodObject<{
     presignedUrl: z.ZodString;

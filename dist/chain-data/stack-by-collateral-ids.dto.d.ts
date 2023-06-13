@@ -1,19 +1,19 @@
 import { z } from "zod";
 export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<{
     collateralId: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     stack: z.ZodArray<z.ZodObject<{
@@ -152,67 +152,67 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
         }>;
         point: z.ZodObject<{
             amount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             end: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             start: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             lienId: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
         }, "strip", z.ZodTypeAny, {
@@ -222,31 +222,31 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
             lienId: import("ethers").BigNumber;
         }, {
             amount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             end: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             start: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             lienId: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
         }>;
@@ -304,31 +304,31 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
         };
         point: {
             amount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             end: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             start: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             lienId: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
         };
@@ -352,10 +352,10 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
     }[];
 }, {
     collateralId: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     stack: {
@@ -398,31 +398,31 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
         };
         point: {
             amount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             end: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             start: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             lienId: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
         };

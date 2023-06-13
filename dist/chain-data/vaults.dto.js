@@ -8,7 +8,7 @@ var VaultType;
 (function (VaultType) {
     VaultType["Solo"] = "1";
     VaultType["Public"] = "2";
-})(VaultType = exports.VaultType || (exports.VaultType = {}));
+})(VaultType || (exports.VaultType = VaultType = {}));
 exports.VaultQueryParamsSchema = zod_1.z.object({
     lp: sdk_1.AddressSchema.optional(),
 });
