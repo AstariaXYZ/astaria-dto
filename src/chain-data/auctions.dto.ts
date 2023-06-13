@@ -1,10 +1,6 @@
-import {
-  Uint256Schema,
-  AddressSchema,
-  HexSchema,
-  Uint8Schema,
-} from "@astariaxyz/sdk";
+import { Uint256Schema, AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
+import { Uint8Schema } from "../common/number";
 
 export const SeaportConsiderationItemSchema = z.object({
   identifierOrCriteria: Uint256Schema,
@@ -35,7 +31,6 @@ export const SeaportOrderParamsSchema = z
     "consideration[0]": SeaportConsiderationItemSchema,
     "consideration[1]": SeaportConsiderationItemSchema,
     "offer[0]": SeaportOfferItemSchema,
-    "offer[1]": SeaportOfferItemSchema.optional(),
     startTime: Uint256Schema,
     endTime: Uint256Schema,
   })
@@ -44,17 +39,13 @@ export const SeaportOrderParamsSchema = z
       "consideration[0]": consideration0,
       "consideration[1]": consideration1,
       "offer[0]": offer0,
-      "offer[1]": offer1,
       ...rest
     } = data;
-
-    const offer = [offer0];
-    if (offer1) offer.push(offer1);
 
     return {
       ...rest,
       consideration: [consideration0, consideration1],
-      offer,
+      offer: [offer0],
     };
   });
 

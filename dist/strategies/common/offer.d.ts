@@ -176,6 +176,7 @@ export declare const OfferSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     type: StrategyLeafType;
     vault: `0x${string}`;
+    token: `0x${string}`;
     lien: {
         amount: import("ethers").BigNumber;
         rate: import("ethers").BigNumber;
@@ -183,7 +184,6 @@ export declare const OfferSchema: z.ZodObject<{
         maxPotentialDebt: import("ethers").BigNumber;
         liquidationInitialAsk: import("ethers").BigNumber;
     };
-    token: `0x${string}`;
     expiration: import("ethers").BigNumber;
     offerHash: `0x${string}`;
     cid: string;
@@ -193,6 +193,7 @@ export declare const OfferSchema: z.ZodObject<{
 }, {
     type: StrategyLeafType;
     vault: `0x${string}`;
+    token: `0x${string}`;
     lien: {
         amount: (string | import("ethers").BigNumber | {
             type: "BigNumber";
@@ -230,7 +231,6 @@ export declare const OfferSchema: z.ZodObject<{
             hex: string;
         } | undefined);
     };
-    token: `0x${string}`;
     expiration: (string | import("ethers").BigNumber | {
         hex: `0x${string}`;
         type: "BigNumber";
