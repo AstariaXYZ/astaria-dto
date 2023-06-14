@@ -247,3 +247,4 @@ export declare const OfferSchema: z.ZodObject<{
     } | undefined;
     borrower?: `0x${string}` | undefined;
 }>;
+export type Offer = z.infer<typeof OfferSchema>;

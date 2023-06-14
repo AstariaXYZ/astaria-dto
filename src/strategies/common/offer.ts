@@ -20,3 +20,5 @@ export const OfferSchema = z.object({
   cid: CidSchema,
   leaf: HexSchema,
 });
+
+export type Offer = z.infer<typeof OfferSchema>;
