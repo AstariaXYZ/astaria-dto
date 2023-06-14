@@ -4,12 +4,12 @@ export declare const StrategyPrepareRequestSchema: z.ZodObject<{
     signature: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
     cid: z.ZodString;
 }, "strip", z.ZodTypeAny, {
-    cid: string;
     signature: `0x${string}`;
+    cid: string;
     delegateAddress: `0x${string}`;
 }, {
-    cid: string;
     signature: `0x${string}`;
+    cid: string;
     delegateAddress: `0x${string}`;
 }>;
 export declare const StrategyPrepareResponseSchema: z.ZodObject<{
