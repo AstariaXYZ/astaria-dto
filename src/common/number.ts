@@ -4,7 +4,7 @@ const UINT8MAX = 2 ** 8 - 1;
 const UINT40MAX = 2 ** 40 - 1;
 
 export const Uint8Schema = z
-  .union([z.string(), z.number()])
+  .union([z.string(), z.number().int()])
   .transform((val) => (typeof val === "number" ? val : Number.parseFloat(val)))
   .refine(
     (val) => Number.isInteger(val) && val >= 0,
@@ -13,7 +13,7 @@ export const Uint8Schema = z
   .refine((val) => val <= UINT8MAX, "Cannot exceed (2^8) - 1");
 
 export const Uint40Schema = z
-  .union([z.string(), z.number()])
+  .union([z.string(), z.number().int()])
   .transform((val) => (typeof val === "number" ? val : Number.parseFloat(val)))
   .refine(
     (val) => Number.isInteger(val) && val >= 0,

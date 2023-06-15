@@ -64,8 +64,8 @@ exports.AuctionSchema = zod_1.z.object({
     collateralId: sdk_1.Uint256Schema,
     liquidator: sdk_1.AddressSchema,
     orderParameters: exports.SeaportOrderParamsSchema,
-    auctionStart: zod_1.z.number(),
-    auctionEnd: zod_1.z.number(),
+    auctionStart: zod_1.z.number().int(),
+    auctionEnd: zod_1.z.number().int(),
 });
 exports.AuctionsResponseSchema = zod_1.z.object({
     results: zod_1.z.array(exports.AuctionSchema),

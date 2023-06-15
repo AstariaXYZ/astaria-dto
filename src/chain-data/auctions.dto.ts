@@ -53,8 +53,8 @@ export const AuctionSchema = z.object({
   collateralId: Uint256Schema,
   liquidator: AddressSchema,
   orderParameters: SeaportOrderParamsSchema,
-  auctionStart: z.number(),
-  auctionEnd: z.number(),
+  auctionStart: z.number().int(),
+  auctionEnd: z.number().int(),
 });
 
 export const AuctionsResponseSchema = z.object({
