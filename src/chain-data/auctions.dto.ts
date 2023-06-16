@@ -1,20 +1,21 @@
 import { Uint256Schema, AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
+import { Uint8Schema } from "../common/number";
 
 export const SeaportConsiderationItemSchema = z.object({
-  identifierOrCriteria: z.string(),
+  identifierOrCriteria: Uint256Schema,
   startAmount: Uint256Schema,
   endAmount: Uint256Schema,
-  itemType: z.string(),
+  itemType: Uint8Schema,
   recipient: AddressSchema,
   token: AddressSchema,
 });
 
 export const SeaportOfferItemSchema = z.object({
-  identifierOrCriteria: z.string(),
+  identifierOrCriteria: Uint256Schema,
   startAmount: Uint256Schema,
   endAmount: Uint256Schema,
-  itemType: z.string(),
+  itemType: Uint8Schema,
   token: AddressSchema,
 });
 
@@ -22,30 +23,29 @@ export const SeaportOrderParamsSchema = z
   .object({
     conduitKey: HexSchema,
     offerer: AddressSchema,
-    orderType: z.string(),
+    orderType: Uint8Schema,
     salt: Uint256Schema,
-    totalOriginalConsiderationItems: z.number().refine((n) => n === 2),
+    totalOriginalConsiderationItems: Uint256Schema.refine((val) => val.eq(2)),
     zone: AddressSchema,
     zoneHash: HexSchema,
     "consideration[0]": SeaportConsiderationItemSchema,
     "consideration[1]": SeaportConsiderationItemSchema,
     "offer[0]": SeaportOfferItemSchema,
-    "offer[1]": SeaportOfferItemSchema,
-    startTime: z.string(),
-    endTime: z.string(),
+    startTime: Uint256Schema,
+    endTime: Uint256Schema,
   })
   .transform((data) => {
     const {
       "consideration[0]": consideration0,
       "consideration[1]": consideration1,
       "offer[0]": offer0,
-      "offer[1]": offer1,
       ...rest
     } = data;
+
     return {
       ...rest,
       consideration: [consideration0, consideration1],
-      offer: [offer0, offer1],
+      offer: [offer0],
     };
   });
 
@@ -58,7 +58,7 @@ export const AuctionSchema = z.object({
 });
 
 export const AuctionsResponseSchema = z.object({
-  results: z.array(z.any()),
+  results: z.array(AuctionSchema),
   count: z.number().int().min(0).max(100),
 });
 

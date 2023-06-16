@@ -141,7 +141,6 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         };
     }>;
 }, "strip", z.ZodTypeAny, {
-    cid: string;
     proof: string[];
     signature: {
         r: string;
@@ -152,6 +151,7 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         yParityAndS: string;
         compact: string;
     };
+    cid: string;
     typedData: {
         message: {
             nonce: string;
@@ -176,7 +176,6 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         };
     };
 }, {
-    cid: string;
     proof: string[];
     signature: {
         r: string;
@@ -187,6 +186,7 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         yParityAndS: string;
         compact: string;
     };
+    cid: string;
     typedData: {
         message: {
             nonce: string;

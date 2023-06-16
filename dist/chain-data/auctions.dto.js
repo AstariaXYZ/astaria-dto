@@ -25,40 +25,40 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuctionsResponseSchema = exports.AuctionSchema = exports.SeaportOrderParamsSchema = exports.SeaportOfferItemSchema = exports.SeaportConsiderationItemSchema = void 0;
 var sdk_1 = require("@astariaxyz/sdk");
 var zod_1 = require("zod");
+var number_1 = require("../common/number");
 exports.SeaportConsiderationItemSchema = zod_1.z.object({
-    identifierOrCriteria: zod_1.z.string(),
+    identifierOrCriteria: sdk_1.Uint256Schema,
     startAmount: sdk_1.Uint256Schema,
     endAmount: sdk_1.Uint256Schema,
-    itemType: zod_1.z.string(),
+    itemType: number_1.Uint8Schema,
     recipient: sdk_1.AddressSchema,
     token: sdk_1.AddressSchema,
 });
 exports.SeaportOfferItemSchema = zod_1.z.object({
-    identifierOrCriteria: zod_1.z.string(),
+    identifierOrCriteria: sdk_1.Uint256Schema,
     startAmount: sdk_1.Uint256Schema,
     endAmount: sdk_1.Uint256Schema,
-    itemType: zod_1.z.string(),
+    itemType: number_1.Uint8Schema,
     token: sdk_1.AddressSchema,
 });
 exports.SeaportOrderParamsSchema = zod_1.z
     .object({
     conduitKey: sdk_1.HexSchema,
     offerer: sdk_1.AddressSchema,
-    orderType: zod_1.z.string(),
+    orderType: number_1.Uint8Schema,
     salt: sdk_1.Uint256Schema,
-    totalOriginalConsiderationItems: zod_1.z.number().refine(function (n) { return n === 2; }),
+    totalOriginalConsiderationItems: sdk_1.Uint256Schema.refine(function (val) { return val.eq(2); }),
     zone: sdk_1.AddressSchema,
     zoneHash: sdk_1.HexSchema,
     "consideration[0]": exports.SeaportConsiderationItemSchema,
     "consideration[1]": exports.SeaportConsiderationItemSchema,
     "offer[0]": exports.SeaportOfferItemSchema,
-    "offer[1]": exports.SeaportOfferItemSchema,
-    startTime: zod_1.z.string(),
-    endTime: zod_1.z.string(),
+    startTime: sdk_1.Uint256Schema,
+    endTime: sdk_1.Uint256Schema,
 })
     .transform(function (data) {
-    var consideration0 = data["consideration[0]"], consideration1 = data["consideration[1]"], offer0 = data["offer[0]"], offer1 = data["offer[1]"], rest = __rest(data, ["consideration[0]", "consideration[1]", "offer[0]", "offer[1]"]);
-    return __assign(__assign({}, rest), { consideration: [consideration0, consideration1], offer: [offer0, offer1] });
+    var consideration0 = data["consideration[0]"], consideration1 = data["consideration[1]"], offer0 = data["offer[0]"], rest = __rest(data, ["consideration[0]", "consideration[1]", "offer[0]"]);
+    return __assign(__assign({}, rest), { consideration: [consideration0, consideration1], offer: [offer0] });
 });
 exports.AuctionSchema = zod_1.z.object({
     collateralId: sdk_1.Uint256Schema,
@@ -68,6 +68,6 @@ exports.AuctionSchema = zod_1.z.object({
     auctionEnd: zod_1.z.number().int(),
 });
 exports.AuctionsResponseSchema = zod_1.z.object({
-    results: zod_1.z.array(zod_1.z.any()),
+    results: zod_1.z.array(exports.AuctionSchema),
     count: zod_1.z.number().int().min(0).max(100),
 });
