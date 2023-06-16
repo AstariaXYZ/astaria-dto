@@ -1,522 +1,522 @@
 import { z } from "zod";
 export declare const SeaportConsiderationItemSchema: z.ZodObject<{
     identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-    recipient: z.ZodString;
-    token: z.ZodString;
+    recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
 }, "strip", z.ZodTypeAny, {
-    token: string;
+    token: `0x${string}`;
     identifierOrCriteria: import("ethers").BigNumber;
     startAmount: import("ethers").BigNumber;
     endAmount: import("ethers").BigNumber;
     itemType: number;
-    recipient: string;
+    recipient: `0x${string}`;
 }, {
-    token: string;
+    token: `0x${string}`;
     identifierOrCriteria: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     startAmount: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     endAmount: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     itemType: string | number;
-    recipient: string;
+    recipient: `0x${string}`;
 }>;
 export declare const SeaportOfferItemSchema: z.ZodObject<{
     identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-    token: z.ZodString;
+    token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
 }, "strip", z.ZodTypeAny, {
-    token: string;
+    token: `0x${string}`;
     identifierOrCriteria: import("ethers").BigNumber;
     startAmount: import("ethers").BigNumber;
     endAmount: import("ethers").BigNumber;
     itemType: number;
 }, {
-    token: string;
+    token: `0x${string}`;
     identifierOrCriteria: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     startAmount: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     endAmount: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     itemType: string | number;
 }>;
 export declare const SeaportOrderParamsSchema: z.ZodEffects<z.ZodObject<{
-    conduitKey: z.ZodString;
-    offerer: z.ZodString;
+    conduitKey: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+    offerer: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
     orderType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
     salt: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     totalOriginalConsiderationItems: z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
-    zone: z.ZodString;
-    zoneHash: z.ZodString;
+    zone: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    zoneHash: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
     "consideration[0]": z.ZodObject<{
         identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-        recipient: z.ZodString;
-        token: z.ZodString;
+        recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
     }, "strip", z.ZodTypeAny, {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
         itemType: number;
-        recipient: string;
+        recipient: `0x${string}`;
     }, {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
-        recipient: string;
+        recipient: `0x${string}`;
     }>;
     "consideration[1]": z.ZodObject<{
         identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-        recipient: z.ZodString;
-        token: z.ZodString;
+        recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
     }, "strip", z.ZodTypeAny, {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
         itemType: number;
-        recipient: string;
+        recipient: `0x${string}`;
     }, {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
-        recipient: string;
+        recipient: `0x${string}`;
     }>;
     "offer[0]": z.ZodObject<{
         identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-        token: z.ZodString;
+        token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
     }, "strip", z.ZodTypeAny, {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
         itemType: number;
     }, {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
     }>;
     startTime: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
     endTime: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
 }, "strip", z.ZodTypeAny, {
-    conduitKey: string;
-    offerer: string;
+    conduitKey: `0x${string}`;
+    offerer: `0x${string}`;
     orderType: number;
     salt: import("ethers").BigNumber;
     totalOriginalConsiderationItems: import("ethers").BigNumber;
-    zone: string;
-    zoneHash: string;
+    zone: `0x${string}`;
+    zoneHash: `0x${string}`;
     "consideration[0]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
         itemType: number;
-        recipient: string;
+        recipient: `0x${string}`;
     };
     "consideration[1]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
         itemType: number;
-        recipient: string;
+        recipient: `0x${string}`;
     };
     "offer[0]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
@@ -525,622 +525,622 @@ export declare const SeaportOrderParamsSchema: z.ZodEffects<z.ZodObject<{
     startTime: import("ethers").BigNumber;
     endTime: import("ethers").BigNumber;
 }, {
-    conduitKey: string;
-    offerer: string;
+    conduitKey: `0x${string}`;
+    offerer: `0x${string}`;
     orderType: string | number;
     salt: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
-    zone: string;
-    zoneHash: string;
+    zone: `0x${string}`;
+    zoneHash: `0x${string}`;
     "consideration[0]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
-        recipient: string;
+        recipient: `0x${string}`;
     };
     "consideration[1]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
-        recipient: string;
+        recipient: `0x${string}`;
     };
     "offer[0]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
     };
     startTime: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     endTime: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
 }>, {
     consideration: {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
         itemType: number;
-        recipient: string;
+        recipient: `0x${string}`;
     }[];
     offer: {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: import("ethers").BigNumber;
         startAmount: import("ethers").BigNumber;
         endAmount: import("ethers").BigNumber;
         itemType: number;
     }[];
-    conduitKey: string;
-    offerer: string;
+    conduitKey: `0x${string}`;
+    offerer: `0x${string}`;
     orderType: number;
     salt: import("ethers").BigNumber;
     totalOriginalConsiderationItems: import("ethers").BigNumber;
-    zone: string;
-    zoneHash: string;
+    zone: `0x${string}`;
+    zoneHash: `0x${string}`;
     startTime: import("ethers").BigNumber;
     endTime: import("ethers").BigNumber;
 }, {
-    conduitKey: string;
-    offerer: string;
+    conduitKey: `0x${string}`;
+    offerer: `0x${string}`;
     orderType: string | number;
     salt: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
-    zone: string;
-    zoneHash: string;
+    zone: `0x${string}`;
+    zoneHash: `0x${string}`;
     "consideration[0]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
-        recipient: string;
+        recipient: `0x${string}`;
     };
     "consideration[1]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
-        recipient: string;
+        recipient: `0x${string}`;
     };
     "offer[0]": {
-        token: string;
+        token: `0x${string}`;
         identifierOrCriteria: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         startAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endAmount: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         itemType: string | number;
     };
     startTime: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
     endTime: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
 }>;
 export declare const AuctionSchema: z.ZodObject<{
     collateralId: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodString;
+        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         type: z.ZodLiteral<"BigNumber">;
     }, "strip", z.ZodTypeAny, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, import("ethers").BigNumber, {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }>;
-    liquidator: z.ZodString;
+    liquidator: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
     orderParameters: z.ZodEffects<z.ZodObject<{
-        conduitKey: z.ZodString;
-        offerer: z.ZodString;
+        conduitKey: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+        offerer: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         orderType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
         salt: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         totalOriginalConsiderationItems: z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
-        zone: z.ZodString;
-        zoneHash: z.ZodString;
+        zone: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        zoneHash: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         "consideration[0]": z.ZodObject<{
             identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-            recipient: z.ZodString;
-            token: z.ZodString;
+            recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+            token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         }, "strip", z.ZodTypeAny, {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
-            recipient: string;
+            recipient: `0x${string}`;
         }, {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         }>;
         "consideration[1]": z.ZodObject<{
             identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-            recipient: z.ZodString;
-            token: z.ZodString;
+            recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+            token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         }, "strip", z.ZodTypeAny, {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
-            recipient: string;
+            recipient: `0x${string}`;
         }, {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         }>;
         "offer[0]": z.ZodObject<{
             identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-            token: z.ZodString;
+            token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         }, "strip", z.ZodTypeAny, {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
         }, {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
         }>;
         startTime: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
         endTime: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
     }, "strip", z.ZodTypeAny, {
-        conduitKey: string;
-        offerer: string;
+        conduitKey: `0x${string}`;
+        offerer: `0x${string}`;
         orderType: number;
         salt: import("ethers").BigNumber;
         totalOriginalConsiderationItems: import("ethers").BigNumber;
-        zone: string;
-        zoneHash: string;
+        zone: `0x${string}`;
+        zoneHash: `0x${string}`;
         "consideration[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "consideration[1]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "offer[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
@@ -1149,250 +1149,250 @@ export declare const AuctionSchema: z.ZodObject<{
         startTime: import("ethers").BigNumber;
         endTime: import("ethers").BigNumber;
     }, {
-        conduitKey: string;
-        offerer: string;
+        conduitKey: `0x${string}`;
+        offerer: `0x${string}`;
         orderType: string | number;
         salt: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
-        zone: string;
-        zoneHash: string;
+        zone: `0x${string}`;
+        zoneHash: `0x${string}`;
         "consideration[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "consideration[1]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "offer[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
         };
         startTime: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endTime: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
     }>, {
         consideration: {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
-            recipient: string;
+            recipient: `0x${string}`;
         }[];
         offer: {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
         }[];
-        conduitKey: string;
-        offerer: string;
+        conduitKey: `0x${string}`;
+        offerer: `0x${string}`;
         orderType: number;
         salt: import("ethers").BigNumber;
         totalOriginalConsiderationItems: import("ethers").BigNumber;
-        zone: string;
-        zoneHash: string;
+        zone: `0x${string}`;
+        zoneHash: `0x${string}`;
         startTime: import("ethers").BigNumber;
         endTime: import("ethers").BigNumber;
     }, {
-        conduitKey: string;
-        offerer: string;
+        conduitKey: `0x${string}`;
+        offerer: `0x${string}`;
         orderType: string | number;
         salt: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
-        zone: string;
-        zoneHash: string;
+        zone: `0x${string}`;
+        zoneHash: `0x${string}`;
         "consideration[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "consideration[1]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "offer[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
         };
         startTime: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endTime: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
     }>;
@@ -1400,30 +1400,30 @@ export declare const AuctionSchema: z.ZodObject<{
     auctionEnd: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
     collateralId: import("ethers").BigNumber;
-    liquidator: string;
+    liquidator: `0x${string}`;
     orderParameters: {
         consideration: {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
-            recipient: string;
+            recipient: `0x${string}`;
         }[];
         offer: {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: import("ethers").BigNumber;
             startAmount: import("ethers").BigNumber;
             endAmount: import("ethers").BigNumber;
             itemType: number;
         }[];
-        conduitKey: string;
-        offerer: string;
+        conduitKey: `0x${string}`;
+        offerer: `0x${string}`;
         orderType: number;
         salt: import("ethers").BigNumber;
         totalOriginalConsiderationItems: import("ethers").BigNumber;
-        zone: string;
-        zoneHash: string;
+        zone: `0x${string}`;
+        zoneHash: `0x${string}`;
         startTime: import("ethers").BigNumber;
         endTime: import("ethers").BigNumber;
     };
@@ -1431,122 +1431,122 @@ export declare const AuctionSchema: z.ZodObject<{
     auctionEnd: number;
 }, {
     collateralId: (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     }) & (string | import("ethers").BigNumber | {
-        hex: string;
+        hex: `0x${string}`;
         type: "BigNumber";
     } | undefined);
-    liquidator: string;
+    liquidator: `0x${string}`;
     orderParameters: {
-        conduitKey: string;
-        offerer: string;
+        conduitKey: `0x${string}`;
+        offerer: `0x${string}`;
         orderType: string | number;
         salt: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
-        zone: string;
-        zoneHash: string;
+        zone: `0x${string}`;
+        zoneHash: `0x${string}`;
         "consideration[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "consideration[1]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
-            recipient: string;
+            recipient: `0x${string}`;
         };
         "offer[0]": {
-            token: string;
+            token: `0x${string}`;
             identifierOrCriteria: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             startAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endAmount: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             itemType: string | number;
         };
         startTime: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
         endTime: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
     };
@@ -1556,373 +1556,373 @@ export declare const AuctionSchema: z.ZodObject<{
 export declare const AuctionsResponseSchema: z.ZodObject<{
     results: z.ZodArray<z.ZodObject<{
         collateralId: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodString;
+            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             type: z.ZodLiteral<"BigNumber">;
         }, "strip", z.ZodTypeAny, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, import("ethers").BigNumber, {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }>;
-        liquidator: z.ZodString;
+        liquidator: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         orderParameters: z.ZodEffects<z.ZodObject<{
-            conduitKey: z.ZodString;
-            offerer: z.ZodString;
+            conduitKey: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+            offerer: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
             orderType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
             salt: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             totalOriginalConsiderationItems: z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
-            zone: z.ZodString;
-            zoneHash: z.ZodString;
+            zone: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+            zoneHash: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
             "consideration[0]": z.ZodObject<{
                 identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-                recipient: z.ZodString;
-                token: z.ZodString;
+                recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+                token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
             }, "strip", z.ZodTypeAny, {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
-                recipient: string;
+                recipient: `0x${string}`;
             }, {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             }>;
             "consideration[1]": z.ZodObject<{
                 identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-                recipient: z.ZodString;
-                token: z.ZodString;
+                recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+                token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
             }, "strip", z.ZodTypeAny, {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
-                recipient: string;
+                recipient: `0x${string}`;
             }, {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             }>;
             "offer[0]": z.ZodObject<{
                 identifierOrCriteria: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 startAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 endAmount: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                    hex: z.ZodString;
+                    hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                     type: z.ZodLiteral<"BigNumber">;
                 }, "strip", z.ZodTypeAny, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, import("ethers").BigNumber, {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }>;
                 itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-                token: z.ZodString;
+                token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
             }, "strip", z.ZodTypeAny, {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
             }, {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
             }>;
             startTime: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
             endTime: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodString;
+                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
                 type: z.ZodLiteral<"BigNumber">;
             }, "strip", z.ZodTypeAny, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, import("ethers").BigNumber, {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }>;
         }, "strip", z.ZodTypeAny, {
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: number;
             salt: import("ethers").BigNumber;
             totalOriginalConsiderationItems: import("ethers").BigNumber;
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             "consideration[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "consideration[1]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "offer[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
@@ -1931,250 +1931,250 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
             startTime: import("ethers").BigNumber;
             endTime: import("ethers").BigNumber;
         }, {
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: string | number;
             salt: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             "consideration[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "consideration[1]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "offer[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
             };
             startTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
         }>, {
             consideration: {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
-                recipient: string;
+                recipient: `0x${string}`;
             }[];
             offer: {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
             }[];
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: number;
             salt: import("ethers").BigNumber;
             totalOriginalConsiderationItems: import("ethers").BigNumber;
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             startTime: import("ethers").BigNumber;
             endTime: import("ethers").BigNumber;
         }, {
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: string | number;
             salt: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             "consideration[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "consideration[1]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "offer[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
             };
             startTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
         }>;
@@ -2182,30 +2182,30 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
         auctionEnd: z.ZodNumber;
     }, "strip", z.ZodTypeAny, {
         collateralId: import("ethers").BigNumber;
-        liquidator: string;
+        liquidator: `0x${string}`;
         orderParameters: {
             consideration: {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
-                recipient: string;
+                recipient: `0x${string}`;
             }[];
             offer: {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
             }[];
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: number;
             salt: import("ethers").BigNumber;
             totalOriginalConsiderationItems: import("ethers").BigNumber;
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             startTime: import("ethers").BigNumber;
             endTime: import("ethers").BigNumber;
         };
@@ -2213,122 +2213,122 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
         auctionEnd: number;
     }, {
         collateralId: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
-        liquidator: string;
+        liquidator: `0x${string}`;
         orderParameters: {
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: string | number;
             salt: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             "consideration[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "consideration[1]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "offer[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
             };
             startTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
         };
@@ -2339,30 +2339,30 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     results: {
         collateralId: import("ethers").BigNumber;
-        liquidator: string;
+        liquidator: `0x${string}`;
         orderParameters: {
             consideration: {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
-                recipient: string;
+                recipient: `0x${string}`;
             }[];
             offer: {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: import("ethers").BigNumber;
                 startAmount: import("ethers").BigNumber;
                 endAmount: import("ethers").BigNumber;
                 itemType: number;
             }[];
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: number;
             salt: import("ethers").BigNumber;
             totalOriginalConsiderationItems: import("ethers").BigNumber;
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             startTime: import("ethers").BigNumber;
             endTime: import("ethers").BigNumber;
         };
@@ -2373,122 +2373,122 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
 }, {
     results: {
         collateralId: (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         }) & (string | import("ethers").BigNumber | {
-            hex: string;
+            hex: `0x${string}`;
             type: "BigNumber";
         } | undefined);
-        liquidator: string;
+        liquidator: `0x${string}`;
         orderParameters: {
-            conduitKey: string;
-            offerer: string;
+            conduitKey: `0x${string}`;
+            offerer: `0x${string}`;
             orderType: string | number;
             salt: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             totalOriginalConsiderationItems: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
-            zone: string;
-            zoneHash: string;
+            zone: `0x${string}`;
+            zoneHash: `0x${string}`;
             "consideration[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "consideration[1]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
-                recipient: string;
+                recipient: `0x${string}`;
             };
             "offer[0]": {
-                token: string;
+                token: `0x${string}`;
                 identifierOrCriteria: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 startAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 endAmount: (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 }) & (string | import("ethers").BigNumber | {
-                    hex: string;
+                    hex: `0x${string}`;
                     type: "BigNumber";
                 } | undefined);
                 itemType: string | number;
             };
             startTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
             endTime: (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             }) & (string | import("ethers").BigNumber | {
-                hex: string;
+                hex: `0x${string}`;
                 type: "BigNumber";
             } | undefined);
         };

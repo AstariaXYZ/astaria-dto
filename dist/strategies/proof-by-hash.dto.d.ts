@@ -72,34 +72,34 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         domain: z.ZodObject<{
             version: z.ZodString;
             chainId: z.ZodNumber;
-            verifyingContract: z.ZodString;
+            verifyingContract: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         }, "strip", z.ZodTypeAny, {
             version: string;
             chainId: number;
-            verifyingContract: string;
+            verifyingContract: `0x${string}`;
         }, {
             version: string;
             chainId: number;
-            verifyingContract: string;
+            verifyingContract: `0x${string}`;
         }>;
         message: z.ZodObject<{
             nonce: z.ZodString;
             deadline: z.ZodString;
-            root: z.ZodString;
+            root: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         }, "strip", z.ZodTypeAny, {
             nonce: string;
             deadline: string;
-            root: string;
+            root: `0x${string}`;
         }, {
             nonce: string;
             deadline: string;
-            root: string;
+            root: `0x${string}`;
         }>;
     }, "strip", z.ZodTypeAny, {
         message: {
             nonce: string;
             deadline: string;
-            root: string;
+            root: `0x${string}`;
         };
         types: {
             EIP712Domain: {
@@ -115,13 +115,13 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         domain: {
             version: string;
             chainId: number;
-            verifyingContract: string;
+            verifyingContract: `0x${string}`;
         };
     }, {
         message: {
             nonce: string;
             deadline: string;
-            root: string;
+            root: `0x${string}`;
         };
         types: {
             EIP712Domain: {
@@ -137,7 +137,7 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         domain: {
             version: string;
             chainId: number;
-            verifyingContract: string;
+            verifyingContract: `0x${string}`;
         };
     }>;
 }, "strip", z.ZodTypeAny, {
@@ -156,7 +156,7 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         message: {
             nonce: string;
             deadline: string;
-            root: string;
+            root: `0x${string}`;
         };
         types: {
             EIP712Domain: {
@@ -172,7 +172,7 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         domain: {
             version: string;
             chainId: number;
-            verifyingContract: string;
+            verifyingContract: `0x${string}`;
         };
     };
 }, {
@@ -191,7 +191,7 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         message: {
             nonce: string;
             deadline: string;
-            root: string;
+            root: `0x${string}`;
         };
         types: {
             EIP712Domain: {
@@ -207,7 +207,7 @@ export declare const ProofByHashResponseSchema: z.ZodObject<{
         domain: {
             version: string;
             chainId: number;
-            verifyingContract: string;
+            verifyingContract: `0x${string}`;
         };
     };
 }>;
