@@ -10,7 +10,7 @@ export const Liquidation = z.object({
 
 export const LiquidationsResponseSchema = z.object({
   results: z.array(Liquidation),
-  count: z.number().int().min(0).max(100),
+  count: z.number().int().min(0),
 });
 
 export type Liquidation = z.infer<typeof Liquidation>;

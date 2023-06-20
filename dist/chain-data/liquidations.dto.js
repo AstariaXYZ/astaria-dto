@@ -11,5 +11,5 @@ exports.Liquidation = zod_1.z.object({
 });
 exports.LiquidationsResponseSchema = zod_1.z.object({
     results: zod_1.z.array(exports.Liquidation),
-    count: zod_1.z.number().int().min(0).max(100),
+    count: zod_1.z.number().int().min(0),
 });

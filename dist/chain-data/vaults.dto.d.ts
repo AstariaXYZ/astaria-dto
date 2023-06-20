@@ -1,5 +1,6 @@
 import { z } from "zod";
 export declare enum VaultType {
+    None = "0",
     Solo = "1",
     Public = "2"
 }
