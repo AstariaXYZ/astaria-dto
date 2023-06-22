@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PaginationParamsSchema = void 0;
-var zod_1 = require("zod");
-exports.PaginationParamsSchema = zod_1.z.object({
-    skip: zod_1.z.coerce.number().min(0).default(0),
-    limit: zod_1.z.coerce.number().min(1).max(100).default(100),
+import { z } from 'zod';
+export const PaginationParamsSchema = z.object({
+    skip: z.coerce.number().min(0).default(0),
+    limit: z.coerce.number().min(1).max(100).default(100),
 });
+//# sourceMappingURL=pagination-params.js.map

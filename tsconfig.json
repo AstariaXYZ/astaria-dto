@@ -2,7 +2,7 @@
   "include": ["src/"],
   "compilerOptions": {
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": ["DOM", "ESNext"],
     "outDir": "dist/",
     "importHelpers": true,
     "declaration": true,
@@ -19,6 +19,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": false,
-    "target": "ES6"
+    "target": "ESNext"
   }
 }

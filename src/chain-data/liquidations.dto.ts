@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { Uint256Schema } from "@astariaxyz/sdk";
 import { StackSlotSchema } from "./common/stack-slot";
+import { Uint256Schema } from "../common/number";
 
 export const Liquidation = z.object({
   collateralId: Uint256Schema,

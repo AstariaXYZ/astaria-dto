@@ -510,31 +510,10 @@ export declare const OfferSchema: z.ZodIntersection<z.ZodDiscriminatedUnion<"typ
         hex: `0x${string}`;
     } | undefined;
 }>]>, z.ZodObject<{
-    expiration: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-        type: z.ZodLiteral<"BigNumber">;
-    }, "strip", z.ZodTypeAny, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, import("ethers").BigNumber, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>;
+    expiration: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
 }, "strip", z.ZodTypeAny, {
-    expiration: import("ethers").BigNumber;
+    expiration: bigint;
 }, {
-    expiration: (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }) & (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    } | undefined);
+    expiration: string | number | bigint;
 }>>;
 export type Offer = z.infer<typeof OfferSchema>;

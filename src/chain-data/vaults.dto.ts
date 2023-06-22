@@ -1,6 +1,7 @@
+import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
-import { AddressSchema, HexSchema, Uint256Schema } from "@astariaxyz/sdk";
-import { PaginationParamsSchema, BoolParamSchema } from "../common";
+import { BoolParamSchema, PaginationParamsSchema } from "../common";
+import { Uint256Schema } from "../common/number";
 
 export enum VaultType {
   Solo = "1",
@@ -17,10 +18,9 @@ export const WithdrawBalanceSchema = z.object({
   withdrawProxy: HexSchema,
 });
 
-
 export const VaultResponseSchema = z.object({
   vault: AddressSchema,
-  vaultBalance: Uint256Schema,//Actually vault shares
+  vaultBalance: Uint256Schema, //Actually vault shares
   vaultType: z.nativeEnum(VaultType),
   strategist: AddressSchema,
   delegate: AddressSchema,
@@ -36,51 +36,48 @@ export const VaultResponseSchema = z.object({
   isVerified: z.boolean().optional(),
 });
 
-
-export const VaultsQueryParamsSchemaOld = z.object({
-
-  lp: AddressSchema.optional(),
-
-  auth: AddressSchema.optional(),
-
-  verified: BoolParamSchema,
-
-}).merge(PaginationParamsSchema);
-
-export const VaultsQueryParamsSchema = z.object({
-
-  lp: AddressSchema.optional(),
-
-  filter: z.object({
+export const VaultsQueryParamsSchemaOld = z
+  .object({
+    lp: AddressSchema.optional(),
 
     auth: AddressSchema.optional(),
 
     verified: BoolParamSchema,
+  })
+  .merge(PaginationParamsSchema);
 
-    lp: BoolParamSchema,
+export const VaultsQueryParamsSchema = z
+  .object({
+    lp: AddressSchema.optional(),
 
-  }).default({}),
+    filter: z
+      .object({
+        auth: AddressSchema.optional(),
 
-  include: z.object({
+        verified: BoolParamSchema,
 
-    shutdown: BoolParamSchema,
+        lp: BoolParamSchema,
+      })
+      .default({}),
 
-  }).default({}),
+    include: z
+      .object({
+        shutdown: BoolParamSchema,
+      })
+      .default({}),
 
-  display: z.object({
-
-    lp: BoolParamSchema,
-
-  }).default({}),
-
-}).merge(PaginationParamsSchema);
-
+    display: z
+      .object({
+        lp: BoolParamSchema,
+      })
+      .default({}),
+  })
+  .merge(PaginationParamsSchema);
 
 export const VaultsResponseSchema = z.object({
   results: z.array(VaultResponseSchema),
   count: z.number().int().positive().max(100),
 });
-
 
 export type WithdrawBalance = z.infer<typeof WithdrawBalanceSchema>;
 

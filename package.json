@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && tsc src/index.ts --outDir dist",
+    "build": "tsc",
     "prepare": "husky install"
   },
   "module": "dist/index.js",
