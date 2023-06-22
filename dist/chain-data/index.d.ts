@@ -5,4 +5,3 @@ export * from "./auctions.dto";
 export * from "./liquidations.dto";
 export * from "./lien-tokens-by-owner.dto";
 export * from "./common/stack-slot";
-export { BigNumber } from "ethers";
