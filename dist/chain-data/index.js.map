@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/chain-data/index.ts"],"names":[],"mappings":"AAAA,cAAc,cAAc,CAAC;AAC7B,cAAc,8BAA8B,CAAC;AAC7C,cAAc,+BAA+B,CAAC;AAC9C,cAAc,gBAAgB,CAAC;AAC/B,cAAc,oBAAoB,CAAC;AACnC,cAAc,4BAA4B,CAAC;AAE3C,cAAc,qBAAqB,CAAC"}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/chain-data/index.ts"],"names":[],"mappings":";;;AAAA,uDAA6B;AAC7B,uEAA6C;AAC7C,wEAA8C;AAC9C,yDAA+B;AAC/B,6DAAmC;AACnC,qEAA2C;AAE3C,8DAAoC"}

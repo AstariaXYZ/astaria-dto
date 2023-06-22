@@ -1,29 +1,32 @@
-import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
-import { z } from "zod";
-import { Uint256NonZeroSchema, Uint256Schema, Uint40Schema, Uint8Schema, } from "../../common/number";
-export const PointSchema = z.object({
-    amount: Uint256Schema,
-    end: Uint40Schema,
-    last: Uint40Schema,
-    lienId: Uint256Schema,
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StackSlotSchema = exports.LienSchema = exports.LienDetailsSchema = exports.PointSchema = void 0;
+const sdk_1 = require("@astariaxyz/sdk");
+const zod_1 = require("zod");
+const number_1 = require("../../common/number");
+exports.PointSchema = zod_1.z.object({
+    amount: number_1.Uint256Schema,
+    end: number_1.Uint40Schema,
+    last: number_1.Uint40Schema,
+    lienId: number_1.Uint256Schema,
 });
-export const LienDetailsSchema = z.object({
-    maxAmount: Uint256Schema,
-    rate: Uint256Schema,
-    duration: Uint256NonZeroSchema,
-    maxPotentialDebt: Uint256Schema,
-    liquidationInitialAsk: Uint256NonZeroSchema,
+exports.LienDetailsSchema = zod_1.z.object({
+    maxAmount: number_1.Uint256Schema,
+    rate: number_1.Uint256Schema,
+    duration: number_1.Uint256NonZeroSchema,
+    maxPotentialDebt: number_1.Uint256Schema,
+    liquidationInitialAsk: number_1.Uint256NonZeroSchema,
 });
-export const LienSchema = z.object({
-    collateralId: Uint256Schema,
-    collateralType: Uint8Schema,
-    details: LienDetailsSchema,
-    strategyRoot: HexSchema,
-    token: AddressSchema,
-    vault: AddressSchema,
+exports.LienSchema = zod_1.z.object({
+    collateralId: number_1.Uint256Schema,
+    collateralType: number_1.Uint8Schema,
+    details: exports.LienDetailsSchema,
+    strategyRoot: sdk_1.HexSchema,
+    token: sdk_1.AddressSchema,
+    vault: sdk_1.AddressSchema,
 });
-export const StackSlotSchema = z.object({
-    lien: LienSchema,
-    point: PointSchema,
+exports.StackSlotSchema = zod_1.z.object({
+    lien: exports.LienSchema,
+    point: exports.PointSchema,
 });
 //# sourceMappingURL=stack-slot.js.map

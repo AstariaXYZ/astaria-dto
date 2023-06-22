@@ -1,68 +1,71 @@
-import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
-import { z } from "zod";
-import { BoolParamSchema, PaginationParamsSchema } from "../common";
-import { Uint256Schema } from "../common/number";
-export var VaultType;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VaultsResponseSchema = exports.VaultsQueryParamsSchema = exports.VaultsQueryParamsSchemaOld = exports.VaultResponseSchema = exports.WithdrawBalanceSchema = exports.VaultQueryParamsSchema = exports.VaultType = void 0;
+const sdk_1 = require("@astariaxyz/sdk");
+const zod_1 = require("zod");
+const common_1 = require("../common");
+const number_1 = require("../common/number");
+var VaultType;
 (function (VaultType) {
     VaultType["Solo"] = "1";
     VaultType["Public"] = "2";
-})(VaultType || (VaultType = {}));
-export const VaultQueryParamsSchema = z.object({
-    lp: AddressSchema.optional(),
+})(VaultType || (exports.VaultType = VaultType = {}));
+exports.VaultQueryParamsSchema = zod_1.z.object({
+    lp: sdk_1.AddressSchema.optional(),
 });
-export const WithdrawBalanceSchema = z.object({
-    balance: Uint256Schema,
-    epoch: Uint256Schema,
-    withdrawProxy: HexSchema,
+exports.WithdrawBalanceSchema = zod_1.z.object({
+    balance: number_1.Uint256Schema,
+    epoch: number_1.Uint256Schema,
+    withdrawProxy: sdk_1.HexSchema,
 });
-export const VaultResponseSchema = z.object({
-    vault: AddressSchema,
-    vaultBalance: Uint256Schema,
-    vaultType: z.nativeEnum(VaultType),
-    strategist: AddressSchema,
-    delegate: AddressSchema,
-    depositBalance: Uint256Schema.optional(),
-    withdrawBalances: z.array(WithdrawBalanceSchema).optional(),
+exports.VaultResponseSchema = zod_1.z.object({
+    vault: sdk_1.AddressSchema,
+    vaultBalance: number_1.Uint256Schema,
+    vaultType: zod_1.z.nativeEnum(VaultType),
+    strategist: sdk_1.AddressSchema,
+    delegate: sdk_1.AddressSchema,
+    depositBalance: number_1.Uint256Schema.optional(),
+    withdrawBalances: zod_1.z.array(exports.WithdrawBalanceSchema).optional(),
     //off-chain data
-    name: z.string(),
-    description: z.string().optional(),
-    thesis: z.string().optional(),
-    banner: z.string().optional(),
-    profile: z.string().optional(),
-    strategistName: z.string().optional(),
-    isVerified: z.boolean().optional(),
+    name: zod_1.z.string(),
+    description: zod_1.z.string().optional(),
+    thesis: zod_1.z.string().optional(),
+    banner: zod_1.z.string().optional(),
+    profile: zod_1.z.string().optional(),
+    strategistName: zod_1.z.string().optional(),
+    isVerified: zod_1.z.boolean().optional(),
 });
-export const VaultsQueryParamsSchemaOld = z
+exports.VaultsQueryParamsSchemaOld = zod_1.z
     .object({
-    lp: AddressSchema.optional(),
-    auth: AddressSchema.optional(),
-    verified: BoolParamSchema,
+    lp: sdk_1.AddressSchema.optional(),
+    auth: sdk_1.AddressSchema.optional(),
+    verified: common_1.BoolParamSchema,
 })
-    .merge(PaginationParamsSchema);
-export const VaultsQueryParamsSchema = z
+    .merge(common_1.PaginationParamsSchema);
+exports.VaultsQueryParamsSchema = zod_1.z
     .object({
-    lp: AddressSchema.optional(),
-    filter: z
+    lp: sdk_1.AddressSchema.optional(),
+    filter: zod_1.z
         .object({
-        auth: AddressSchema.optional(),
-        verified: BoolParamSchema,
-        lp: BoolParamSchema,
+        auth: sdk_1.AddressSchema.optional(),
+        verified: common_1.BoolParamSchema,
+        lp: common_1.BoolParamSchema,
     })
         .default({}),
-    include: z
+    include: zod_1.z
         .object({
-        shutdown: BoolParamSchema,
+        shutdown: common_1.BoolParamSchema,
     })
         .default({}),
-    display: z
+    display: zod_1.z
         .object({
-        lp: BoolParamSchema,
+        lp: common_1.BoolParamSchema,
     })
         .default({}),
 })
-    .merge(PaginationParamsSchema);
-export const VaultsResponseSchema = z.object({
-    results: z.array(VaultResponseSchema),
-    count: z.number().int().positive().max(100),
+    .merge(common_1.PaginationParamsSchema);
+exports.VaultsResponseSchema = zod_1.z.object({
+    results: zod_1.z.array(exports.VaultResponseSchema),
+    count: zod_1.z.number().int().positive().max(100),
 });
 //# sourceMappingURL=vaults.dto.js.map
