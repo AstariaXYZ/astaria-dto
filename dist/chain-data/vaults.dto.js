@@ -6,6 +6,7 @@ var sdk_1 = require("@astariaxyz/sdk");
 var common_1 = require("../common");
 var VaultType;
 (function (VaultType) {
+    VaultType["None"] = "0";
     VaultType["Solo"] = "1";
     VaultType["Public"] = "2";
 })(VaultType || (exports.VaultType = VaultType = {}));

@@ -3,7 +3,7 @@ import { OfferSchema } from "./common/offer";
 
 export const OffersByAssetResponseSchema = z.object({
   results: z.array(OfferSchema),
-  count: z.number().int().min(0).max(100),
+  count: z.number().int().min(0),
 });
 
 export type OffersByAssetResponse = z.input<typeof OffersByAssetResponseSchema>;
