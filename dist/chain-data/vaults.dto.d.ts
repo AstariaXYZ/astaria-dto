@@ -1,8 +1,7 @@
 import { z } from "zod";
 export declare enum VaultType {
-    None = "0",
-    Solo = "1",
-    Public = "2"
+    Private = "0",
+    Public = "1"
 }
 export declare const VaultQueryParamsSchema: z.ZodObject<{
     lp: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>>;

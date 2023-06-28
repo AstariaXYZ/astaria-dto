@@ -3,9 +3,8 @@ import { AddressSchema, HexSchema, Uint256Schema } from "@astariaxyz/sdk";
 import { PaginationParamsSchema, BoolParamSchema } from "../common";
 
 export enum VaultType {
-  None = "0",
-  Solo = "1",
-  Public = "2",
+  Private = "0",
+  Public = "1",
 }
 
 export const VaultQueryParamsSchema = z.object({
