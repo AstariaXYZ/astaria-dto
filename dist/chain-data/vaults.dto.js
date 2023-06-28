@@ -7,9 +7,8 @@ const common_1 = require("../common");
 const number_1 = require("../common/number");
 var VaultType;
 (function (VaultType) {
-    VaultType["None"] = "0";
-    VaultType["Solo"] = "1";
-    VaultType["Public"] = "2";
+    VaultType["Private"] = "0";
+    VaultType["Public"] = "1";
 })(VaultType || (exports.VaultType = VaultType = {}));
 exports.VaultQueryParamsSchema = zod_1.z.object({
     lp: sdk_1.AddressSchema.optional(),
