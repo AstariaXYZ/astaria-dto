@@ -6,6 +6,3 @@ export * from "./liquidations.dto";
 export * from "./lien-tokens-by-owner.dto";
 
 export * from "./common/stack-slot";
-
-// Required to make typescript happy
-export { BigNumber } from "ethers";

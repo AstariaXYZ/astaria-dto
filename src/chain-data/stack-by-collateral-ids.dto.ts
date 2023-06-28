@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Uint256Schema } from "@astariaxyz/sdk";
+import { Uint256Schema } from "../common/number";
 import { StackSlotSchema } from "./common/stack-slot";
 
 export const StackByCollateralIdsResponseSchema = z.array(

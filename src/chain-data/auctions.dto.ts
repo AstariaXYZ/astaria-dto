@@ -1,6 +1,6 @@
-import { Uint256Schema, AddressSchema, HexSchema } from "@astariaxyz/sdk";
+import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
-import { Uint8Schema } from "../common/number";
+import { Uint256Schema, Uint8Schema } from "../common/number";
 
 export const SeaportConsiderationItemSchema = z.object({
   identifierOrCriteria: Uint256Schema,
@@ -25,7 +25,7 @@ export const SeaportOrderParamsSchema = z
     offerer: AddressSchema,
     orderType: Uint8Schema,
     salt: Uint256Schema,
-    totalOriginalConsiderationItems: Uint256Schema.refine((val) => val.eq(2)),
+    totalOriginalConsiderationItems: Uint256Schema.refine((val) => val === 2n),
     zone: AddressSchema,
     zoneHash: HexSchema,
     "consideration[0]": SeaportConsiderationItemSchema,
@@ -59,7 +59,7 @@ export const AuctionSchema = z.object({
 
 export const AuctionsResponseSchema = z.object({
   results: z.array(AuctionSchema),
-  count: z.number().int().min(0),
+  count: z.number().int().nonnegative()
 });
 
 export type Auction = z.infer<typeof AuctionSchema>;

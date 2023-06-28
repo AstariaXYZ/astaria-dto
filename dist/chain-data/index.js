@@ -14,7 +14,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BigNumber = void 0;
 __exportStar(require("./vaults.dto"), exports);
 __exportStar(require("./stack-by-collateral-id.dto"), exports);
 __exportStar(require("./stack-by-collateral-ids.dto"), exports);
@@ -22,6 +21,4 @@ __exportStar(require("./auctions.dto"), exports);
 __exportStar(require("./liquidations.dto"), exports);
 __exportStar(require("./lien-tokens-by-owner.dto"), exports);
 __exportStar(require("./common/stack-slot"), exports);
-// Required to make typescript happy
-var ethers_1 = require("ethers");
-Object.defineProperty(exports, "BigNumber", { enumerable: true, get: function () { return ethers_1.BigNumber; } });
+//# sourceMappingURL=index.js.map
