@@ -1,6 +1,7 @@
-import { Uint256Schema, AddressSchema } from "@astariaxyz/sdk";
-import { OfferSchema } from "./common/offer";
+import { AddressSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
+import { Uint256Schema } from "../common/number";
+import { OfferSchema } from "./common/offer";
 
 export const AssetSchema = z.object({
   collectionAddress: AddressSchema,

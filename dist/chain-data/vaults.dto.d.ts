@@ -12,150 +12,36 @@ export declare const VaultQueryParamsSchema: z.ZodObject<{
     lp?: `0x${string}` | undefined;
 }>;
 export declare const WithdrawBalanceSchema: z.ZodObject<{
-    balance: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-        type: z.ZodLiteral<"BigNumber">;
-    }, "strip", z.ZodTypeAny, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, import("ethers").BigNumber, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>;
-    epoch: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-        type: z.ZodLiteral<"BigNumber">;
-    }, "strip", z.ZodTypeAny, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, import("ethers").BigNumber, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>;
+    balance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
+    epoch: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     withdrawProxy: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
 }, "strip", z.ZodTypeAny, {
-    balance: import("ethers").BigNumber;
-    epoch: import("ethers").BigNumber;
+    balance: bigint;
+    epoch: bigint;
     withdrawProxy: `0x${string}`;
 }, {
-    balance: (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }) & (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    } | undefined);
-    epoch: (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }) & (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    } | undefined);
+    balance: string | number | bigint;
+    epoch: string | number | bigint;
     withdrawProxy: `0x${string}`;
 }>;
 export declare const VaultResponseSchema: z.ZodObject<{
     vault: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-    vaultBalance: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-        type: z.ZodLiteral<"BigNumber">;
-    }, "strip", z.ZodTypeAny, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, import("ethers").BigNumber, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>;
+    vaultBalance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     vaultType: z.ZodNativeEnum<typeof VaultType>;
     strategist: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
     delegate: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-    depositBalance: z.ZodOptional<z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-        hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-        type: z.ZodLiteral<"BigNumber">;
-    }, "strip", z.ZodTypeAny, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, import("ethers").BigNumber, {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }>>;
+    depositBalance: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>>;
     withdrawBalances: z.ZodOptional<z.ZodArray<z.ZodObject<{
-        balance: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-            type: z.ZodLiteral<"BigNumber">;
-        }, "strip", z.ZodTypeAny, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, import("ethers").BigNumber, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>;
-        epoch: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-            type: z.ZodLiteral<"BigNumber">;
-        }, "strip", z.ZodTypeAny, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, import("ethers").BigNumber, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>;
+        balance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
+        epoch: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         withdrawProxy: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
     }, "strip", z.ZodTypeAny, {
-        balance: import("ethers").BigNumber;
-        epoch: import("ethers").BigNumber;
+        balance: bigint;
+        epoch: bigint;
         withdrawProxy: `0x${string}`;
     }, {
-        balance: (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }) & (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined);
-        epoch: (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }) & (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined);
+        balance: string | number | bigint;
+        epoch: string | number | bigint;
         withdrawProxy: `0x${string}`;
     }>, "many">>;
     name: z.ZodString;
@@ -167,15 +53,15 @@ export declare const VaultResponseSchema: z.ZodObject<{
     isVerified: z.ZodOptional<z.ZodBoolean>;
 }, "strip", z.ZodTypeAny, {
     vault: `0x${string}`;
-    vaultBalance: import("ethers").BigNumber;
+    vaultBalance: bigint;
     vaultType: VaultType;
     strategist: `0x${string}`;
     delegate: `0x${string}`;
     name: string;
-    depositBalance?: import("ethers").BigNumber | undefined;
+    depositBalance?: bigint | undefined;
     withdrawBalances?: {
-        balance: import("ethers").BigNumber;
-        epoch: import("ethers").BigNumber;
+        balance: bigint;
+        epoch: bigint;
         withdrawProxy: `0x${string}`;
     }[] | undefined;
     description?: string | undefined;
@@ -186,36 +72,15 @@ export declare const VaultResponseSchema: z.ZodObject<{
     isVerified?: boolean | undefined;
 }, {
     vault: `0x${string}`;
-    vaultBalance: (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    }) & (string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    } | undefined);
+    vaultBalance: string | number | bigint;
     vaultType: VaultType;
     strategist: `0x${string}`;
     delegate: `0x${string}`;
     name: string;
-    depositBalance?: string | import("ethers").BigNumber | {
-        hex: `0x${string}`;
-        type: "BigNumber";
-    } | undefined;
+    depositBalance?: string | number | bigint | undefined;
     withdrawBalances?: {
-        balance: (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }) & (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined);
-        epoch: (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }) & (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined);
+        balance: string | number | bigint;
+        epoch: string | number | bigint;
         withdrawProxy: `0x${string}`;
     }[] | undefined;
     description?: string | undefined;
@@ -309,94 +174,22 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
 export declare const VaultsResponseSchema: z.ZodObject<{
     results: z.ZodArray<z.ZodObject<{
         vault: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-        vaultBalance: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-            type: z.ZodLiteral<"BigNumber">;
-        }, "strip", z.ZodTypeAny, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, import("ethers").BigNumber, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>;
+        vaultBalance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         vaultType: z.ZodNativeEnum<typeof VaultType>;
         strategist: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         delegate: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-        depositBalance: z.ZodOptional<z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-            hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-            type: z.ZodLiteral<"BigNumber">;
-        }, "strip", z.ZodTypeAny, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, import("ethers").BigNumber, {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }>>;
+        depositBalance: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>>;
         withdrawBalances: z.ZodOptional<z.ZodArray<z.ZodObject<{
-            balance: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-                type: z.ZodLiteral<"BigNumber">;
-            }, "strip", z.ZodTypeAny, {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }, {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }>, import("ethers").BigNumber, {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }>;
-            epoch: z.ZodEffects<z.ZodUnion<[z.ZodType<import("ethers").BigNumber, z.ZodTypeDef, import("ethers").BigNumber>, z.ZodEffects<z.ZodObject<{
-                hex: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-                type: z.ZodLiteral<"BigNumber">;
-            }, "strip", z.ZodTypeAny, {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }, {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }>, import("ethers").BigNumber, {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }>, z.ZodEffects<z.ZodString, import("ethers").BigNumber, string>]>, import("ethers").BigNumber, string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }>;
+            balance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
+            epoch: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             withdrawProxy: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         }, "strip", z.ZodTypeAny, {
-            balance: import("ethers").BigNumber;
-            epoch: import("ethers").BigNumber;
+            balance: bigint;
+            epoch: bigint;
             withdrawProxy: `0x${string}`;
         }, {
-            balance: (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }) & (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            } | undefined);
-            epoch: (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }) & (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            } | undefined);
+            balance: string | number | bigint;
+            epoch: string | number | bigint;
             withdrawProxy: `0x${string}`;
         }>, "many">>;
         name: z.ZodString;
@@ -408,15 +201,15 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         isVerified: z.ZodOptional<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
         vault: `0x${string}`;
-        vaultBalance: import("ethers").BigNumber;
+        vaultBalance: bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
         name: string;
-        depositBalance?: import("ethers").BigNumber | undefined;
+        depositBalance?: bigint | undefined;
         withdrawBalances?: {
-            balance: import("ethers").BigNumber;
-            epoch: import("ethers").BigNumber;
+            balance: bigint;
+            epoch: bigint;
             withdrawProxy: `0x${string}`;
         }[] | undefined;
         description?: string | undefined;
@@ -427,36 +220,15 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         isVerified?: boolean | undefined;
     }, {
         vault: `0x${string}`;
-        vaultBalance: (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }) & (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined);
+        vaultBalance: string | number | bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
         name: string;
-        depositBalance?: string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined;
+        depositBalance?: string | number | bigint | undefined;
         withdrawBalances?: {
-            balance: (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }) & (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            } | undefined);
-            epoch: (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }) & (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            } | undefined);
+            balance: string | number | bigint;
+            epoch: string | number | bigint;
             withdrawProxy: `0x${string}`;
         }[] | undefined;
         description?: string | undefined;
@@ -470,15 +242,15 @@ export declare const VaultsResponseSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     results: {
         vault: `0x${string}`;
-        vaultBalance: import("ethers").BigNumber;
+        vaultBalance: bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
         name: string;
-        depositBalance?: import("ethers").BigNumber | undefined;
+        depositBalance?: bigint | undefined;
         withdrawBalances?: {
-            balance: import("ethers").BigNumber;
-            epoch: import("ethers").BigNumber;
+            balance: bigint;
+            epoch: bigint;
             withdrawProxy: `0x${string}`;
         }[] | undefined;
         description?: string | undefined;
@@ -492,36 +264,15 @@ export declare const VaultsResponseSchema: z.ZodObject<{
 }, {
     results: {
         vault: `0x${string}`;
-        vaultBalance: (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        }) & (string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined);
+        vaultBalance: string | number | bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
         name: string;
-        depositBalance?: string | import("ethers").BigNumber | {
-            hex: `0x${string}`;
-            type: "BigNumber";
-        } | undefined;
+        depositBalance?: string | number | bigint | undefined;
         withdrawBalances?: {
-            balance: (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }) & (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            } | undefined);
-            epoch: (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            }) & (string | import("ethers").BigNumber | {
-                hex: `0x${string}`;
-                type: "BigNumber";
-            } | undefined);
+            balance: string | number | bigint;
+            epoch: string | number | bigint;
             withdrawProxy: `0x${string}`;
         }[] | undefined;
         description?: string | undefined;
