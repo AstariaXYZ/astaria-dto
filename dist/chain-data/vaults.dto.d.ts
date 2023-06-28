@@ -1,47 +1,47 @@
 import { z } from "zod";
 export declare enum VaultType {
-    Solo = "1",
-    Public = "2"
+    Private = "0",
+    Public = "1"
 }
 export declare const VaultQueryParamsSchema: z.ZodObject<{
-    lp: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>>;
+    lp: z.ZodOptional<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
-    lp?: `0x${string}` | undefined;
+    lp?: string | undefined;
 }, {
-    lp?: `0x${string}` | undefined;
+    lp?: string | undefined;
 }>;
 export declare const WithdrawBalanceSchema: z.ZodObject<{
     balance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     epoch: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-    withdrawProxy: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+    withdrawProxy: z.ZodString;
 }, "strip", z.ZodTypeAny, {
     balance: bigint;
     epoch: bigint;
-    withdrawProxy: `0x${string}`;
+    withdrawProxy: string;
 }, {
     balance: string | number | bigint;
     epoch: string | number | bigint;
-    withdrawProxy: `0x${string}`;
+    withdrawProxy: string;
 }>;
 export declare const VaultResponseSchema: z.ZodObject<{
-    vault: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    vault: z.ZodString;
     vaultBalance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     vaultType: z.ZodNativeEnum<typeof VaultType>;
-    strategist: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-    delegate: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    strategist: z.ZodString;
+    delegate: z.ZodString;
     depositBalance: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>>;
     withdrawBalances: z.ZodOptional<z.ZodArray<z.ZodObject<{
         balance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         epoch: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-        withdrawProxy: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+        withdrawProxy: z.ZodString;
     }, "strip", z.ZodTypeAny, {
         balance: bigint;
         epoch: bigint;
-        withdrawProxy: `0x${string}`;
+        withdrawProxy: string;
     }, {
         balance: string | number | bigint;
         epoch: string | number | bigint;
-        withdrawProxy: `0x${string}`;
+        withdrawProxy: string;
     }>, "many">>;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
@@ -51,17 +51,17 @@ export declare const VaultResponseSchema: z.ZodObject<{
     strategistName: z.ZodOptional<z.ZodString>;
     isVerified: z.ZodOptional<z.ZodBoolean>;
 }, "strip", z.ZodTypeAny, {
-    vault: `0x${string}`;
+    vault: string;
     vaultBalance: bigint;
     vaultType: VaultType;
-    strategist: `0x${string}`;
-    delegate: `0x${string}`;
+    strategist: string;
+    delegate: string;
     name: string;
     depositBalance?: bigint | undefined;
     withdrawBalances?: {
         balance: bigint;
         epoch: bigint;
-        withdrawProxy: `0x${string}`;
+        withdrawProxy: string;
     }[] | undefined;
     description?: string | undefined;
     thesis?: string | undefined;
@@ -70,17 +70,17 @@ export declare const VaultResponseSchema: z.ZodObject<{
     strategistName?: string | undefined;
     isVerified?: boolean | undefined;
 }, {
-    vault: `0x${string}`;
+    vault: string;
     vaultBalance: string | number | bigint;
     vaultType: VaultType;
-    strategist: `0x${string}`;
-    delegate: `0x${string}`;
+    strategist: string;
+    delegate: string;
     name: string;
     depositBalance?: string | number | bigint | undefined;
     withdrawBalances?: {
         balance: string | number | bigint;
         epoch: string | number | bigint;
-        withdrawProxy: `0x${string}`;
+        withdrawProxy: string;
     }[] | undefined;
     description?: string | undefined;
     thesis?: string | undefined;
@@ -90,8 +90,8 @@ export declare const VaultResponseSchema: z.ZodObject<{
     isVerified?: boolean | undefined;
 }>;
 export declare const VaultsQueryParamsSchemaOld: z.ZodObject<{
-    lp: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>>;
-    auth: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>>;
+    lp: z.ZodOptional<z.ZodString>;
+    auth: z.ZodOptional<z.ZodString>;
     verified: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     skip: z.ZodDefault<z.ZodNumber>;
     limit: z.ZodDefault<z.ZodNumber>;
@@ -99,30 +99,30 @@ export declare const VaultsQueryParamsSchemaOld: z.ZodObject<{
     skip: number;
     limit: number;
     verified: boolean;
-    lp?: `0x${string}` | undefined;
-    auth?: `0x${string}` | undefined;
+    lp?: string | undefined;
+    auth?: string | undefined;
 }, {
-    lp?: `0x${string}` | undefined;
-    auth?: `0x${string}` | undefined;
+    lp?: string | undefined;
+    auth?: string | undefined;
     verified?: string | undefined;
     skip?: number | undefined;
     limit?: number | undefined;
 }>;
 export declare const VaultsQueryParamsSchema: z.ZodObject<{
     filter: z.ZodDefault<z.ZodObject<{
-        auth: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>>;
+        auth: z.ZodOptional<z.ZodString>;
         verified: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
         lp: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
         lp: boolean;
         verified: boolean;
-        auth?: `0x${string}` | undefined;
+        auth?: string | undefined;
     }, {
-        auth?: `0x${string}` | undefined;
+        auth?: string | undefined;
         verified?: string | undefined;
         lp?: string | undefined;
     }>>;
-    lp: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>>;
+    lp: z.ZodOptional<z.ZodString>;
     include: z.ZodDefault<z.ZodObject<{
         shutdown: z.ZodEffects<z.ZodOptional<z.ZodString>, boolean, string | undefined>;
     }, "strip", z.ZodTypeAny, {
@@ -143,7 +143,7 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
     filter: {
         lp: boolean;
         verified: boolean;
-        auth?: `0x${string}` | undefined;
+        auth?: string | undefined;
     };
     skip: number;
     limit: number;
@@ -153,14 +153,14 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
     display: {
         lp: boolean;
     };
-    lp?: `0x${string}` | undefined;
+    lp?: string | undefined;
 }, {
     filter?: {
-        auth?: `0x${string}` | undefined;
+        auth?: string | undefined;
         verified?: string | undefined;
         lp?: string | undefined;
     } | undefined;
-    lp?: `0x${string}` | undefined;
+    lp?: string | undefined;
     include?: {
         shutdown?: string | undefined;
     } | undefined;
@@ -172,24 +172,24 @@ export declare const VaultsQueryParamsSchema: z.ZodObject<{
 }>;
 export declare const VaultsResponseSchema: z.ZodObject<{
     results: z.ZodArray<z.ZodObject<{
-        vault: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        vault: z.ZodString;
         vaultBalance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         vaultType: z.ZodNativeEnum<typeof VaultType>;
-        strategist: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-        delegate: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        strategist: z.ZodString;
+        delegate: z.ZodString;
         depositBalance: z.ZodOptional<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>>;
         withdrawBalances: z.ZodOptional<z.ZodArray<z.ZodObject<{
             balance: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             epoch: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-            withdrawProxy: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+            withdrawProxy: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             balance: bigint;
             epoch: bigint;
-            withdrawProxy: `0x${string}`;
+            withdrawProxy: string;
         }, {
             balance: string | number | bigint;
             epoch: string | number | bigint;
-            withdrawProxy: `0x${string}`;
+            withdrawProxy: string;
         }>, "many">>;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodString>;
@@ -199,17 +199,17 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         strategistName: z.ZodOptional<z.ZodString>;
         isVerified: z.ZodOptional<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
-        vault: `0x${string}`;
+        vault: string;
         vaultBalance: bigint;
         vaultType: VaultType;
-        strategist: `0x${string}`;
-        delegate: `0x${string}`;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: bigint | undefined;
         withdrawBalances?: {
             balance: bigint;
             epoch: bigint;
-            withdrawProxy: `0x${string}`;
+            withdrawProxy: string;
         }[] | undefined;
         description?: string | undefined;
         thesis?: string | undefined;
@@ -218,17 +218,17 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         strategistName?: string | undefined;
         isVerified?: boolean | undefined;
     }, {
-        vault: `0x${string}`;
+        vault: string;
         vaultBalance: string | number | bigint;
         vaultType: VaultType;
-        strategist: `0x${string}`;
-        delegate: `0x${string}`;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: string | number | bigint | undefined;
         withdrawBalances?: {
             balance: string | number | bigint;
             epoch: string | number | bigint;
-            withdrawProxy: `0x${string}`;
+            withdrawProxy: string;
         }[] | undefined;
         description?: string | undefined;
         thesis?: string | undefined;
@@ -240,17 +240,17 @@ export declare const VaultsResponseSchema: z.ZodObject<{
     count: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
     results: {
-        vault: `0x${string}`;
+        vault: string;
         vaultBalance: bigint;
         vaultType: VaultType;
-        strategist: `0x${string}`;
-        delegate: `0x${string}`;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: bigint | undefined;
         withdrawBalances?: {
             balance: bigint;
             epoch: bigint;
-            withdrawProxy: `0x${string}`;
+            withdrawProxy: string;
         }[] | undefined;
         description?: string | undefined;
         thesis?: string | undefined;
@@ -262,17 +262,17 @@ export declare const VaultsResponseSchema: z.ZodObject<{
     count: number;
 }, {
     results: {
-        vault: `0x${string}`;
+        vault: string;
         vaultBalance: string | number | bigint;
         vaultType: VaultType;
-        strategist: `0x${string}`;
-        delegate: `0x${string}`;
+        strategist: string;
+        delegate: string;
         name: string;
         depositBalance?: string | number | bigint | undefined;
         withdrawBalances?: {
             balance: string | number | bigint;
             epoch: string | number | bigint;
-            withdrawProxy: `0x${string}`;
+            withdrawProxy: string;
         }[] | undefined;
         description?: string | undefined;
         thesis?: string | undefined;

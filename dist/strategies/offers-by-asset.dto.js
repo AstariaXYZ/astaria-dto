@@ -5,6 +5,6 @@ const zod_1 = require("zod");
 const offer_1 = require("./common/offer");
 exports.OffersByAssetResponseSchema = zod_1.z.object({
     results: zod_1.z.array(offer_1.OfferSchema),
-    count: zod_1.z.number().int().min(0).max(100),
+    count: zod_1.z.number().int().min(0),
 });
 //# sourceMappingURL=offers-by-asset.dto.js.map

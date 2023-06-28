@@ -15,6 +15,6 @@ exports.OffersByAssetsRequestSchema = zod_1.z.object({
 });
 exports.OffersByAssetsResponseSchema = zod_1.z.object({
     results: zod_1.z.array(offer_1.OfferSchema),
-    count: zod_1.z.number().int().min(0).max(100),
+    count: zod_1.z.number().int().min(0),
 });
 //# sourceMappingURL=offers-by-assets.dto.js.map

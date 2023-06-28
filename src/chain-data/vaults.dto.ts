@@ -4,8 +4,8 @@ import { BoolParamSchema, PaginationParamsSchema } from "../common";
 import { Uint256Schema } from "../common/number";
 
 export enum VaultType {
-  Solo = "1",
-  Public = "2",
+  Private = "0",
+  Public = "1",
 }
 
 export const VaultQueryParamsSchema = z.object({

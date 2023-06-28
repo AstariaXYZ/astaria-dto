@@ -4,108 +4,108 @@ export declare const SeaportConsiderationItemSchema: z.ZodObject<{
     startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-    recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-    token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    recipient: z.ZodString;
+    token: z.ZodString;
 }, "strip", z.ZodTypeAny, {
-    token: `0x${string}`;
+    token: string;
     identifierOrCriteria: bigint;
     startAmount: bigint;
     endAmount: bigint;
     itemType: number;
-    recipient: `0x${string}`;
+    recipient: string;
 }, {
-    token: `0x${string}`;
+    token: string;
     identifierOrCriteria: string | number | bigint;
     startAmount: string | number | bigint;
     endAmount: string | number | bigint;
     itemType: string | number;
-    recipient: `0x${string}`;
+    recipient: string;
 }>;
 export declare const SeaportOfferItemSchema: z.ZodObject<{
     identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-    token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    token: z.ZodString;
 }, "strip", z.ZodTypeAny, {
-    token: `0x${string}`;
+    token: string;
     identifierOrCriteria: bigint;
     startAmount: bigint;
     endAmount: bigint;
     itemType: number;
 }, {
-    token: `0x${string}`;
+    token: string;
     identifierOrCriteria: string | number | bigint;
     startAmount: string | number | bigint;
     endAmount: string | number | bigint;
     itemType: string | number;
 }>;
 export declare const SeaportOrderParamsSchema: z.ZodEffects<z.ZodObject<{
-    conduitKey: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-    offerer: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    conduitKey: z.ZodString;
+    offerer: z.ZodString;
     orderType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
     salt: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     totalOriginalConsiderationItems: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-    zone: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-    zoneHash: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+    zone: z.ZodString;
+    zoneHash: z.ZodString;
     "consideration[0]": z.ZodObject<{
         identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-        recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-        token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        recipient: z.ZodString;
+        token: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
         itemType: number;
-        recipient: `0x${string}`;
+        recipient: string;
     }, {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
         itemType: string | number;
-        recipient: `0x${string}`;
+        recipient: string;
     }>;
     "consideration[1]": z.ZodObject<{
         identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-        recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-        token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        recipient: z.ZodString;
+        token: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
         itemType: number;
-        recipient: `0x${string}`;
+        recipient: string;
     }, {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
         itemType: string | number;
-        recipient: `0x${string}`;
+        recipient: string;
     }>;
     "offer[0]": z.ZodObject<{
         identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-        token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        token: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
         itemType: number;
     }, {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
@@ -114,31 +114,31 @@ export declare const SeaportOrderParamsSchema: z.ZodEffects<z.ZodObject<{
     startTime: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     endTime: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
 }, "strip", z.ZodTypeAny, {
-    conduitKey: `0x${string}`;
-    offerer: `0x${string}`;
+    conduitKey: string;
+    offerer: string;
     orderType: number;
     salt: bigint;
     totalOriginalConsiderationItems: bigint;
-    zone: `0x${string}`;
-    zoneHash: `0x${string}`;
+    zone: string;
+    zoneHash: string;
     "consideration[0]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
         itemType: number;
-        recipient: `0x${string}`;
+        recipient: string;
     };
     "consideration[1]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
         itemType: number;
-        recipient: `0x${string}`;
+        recipient: string;
     };
     "offer[0]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
@@ -147,31 +147,31 @@ export declare const SeaportOrderParamsSchema: z.ZodEffects<z.ZodObject<{
     startTime: bigint;
     endTime: bigint;
 }, {
-    conduitKey: `0x${string}`;
-    offerer: `0x${string}`;
+    conduitKey: string;
+    offerer: string;
     orderType: string | number;
     salt: string | number | bigint;
     totalOriginalConsiderationItems: string | number | bigint;
-    zone: `0x${string}`;
-    zoneHash: `0x${string}`;
+    zone: string;
+    zoneHash: string;
     "consideration[0]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
         itemType: string | number;
-        recipient: `0x${string}`;
+        recipient: string;
     };
     "consideration[1]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
         itemType: string | number;
-        recipient: `0x${string}`;
+        recipient: string;
     };
     "offer[0]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
@@ -181,55 +181,55 @@ export declare const SeaportOrderParamsSchema: z.ZodEffects<z.ZodObject<{
     endTime: string | number | bigint;
 }>, {
     consideration: {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
         itemType: number;
-        recipient: `0x${string}`;
+        recipient: string;
     }[];
     offer: {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: bigint;
         startAmount: bigint;
         endAmount: bigint;
         itemType: number;
     }[];
-    conduitKey: `0x${string}`;
-    offerer: `0x${string}`;
+    conduitKey: string;
+    offerer: string;
     orderType: number;
     salt: bigint;
     totalOriginalConsiderationItems: bigint;
-    zone: `0x${string}`;
-    zoneHash: `0x${string}`;
+    zone: string;
+    zoneHash: string;
     startTime: bigint;
     endTime: bigint;
 }, {
-    conduitKey: `0x${string}`;
-    offerer: `0x${string}`;
+    conduitKey: string;
+    offerer: string;
     orderType: string | number;
     salt: string | number | bigint;
     totalOriginalConsiderationItems: string | number | bigint;
-    zone: `0x${string}`;
-    zoneHash: `0x${string}`;
+    zone: string;
+    zoneHash: string;
     "consideration[0]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
         itemType: string | number;
-        recipient: `0x${string}`;
+        recipient: string;
     };
     "consideration[1]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
         itemType: string | number;
-        recipient: `0x${string}`;
+        recipient: string;
     };
     "offer[0]": {
-        token: `0x${string}`;
+        token: string;
         identifierOrCriteria: string | number | bigint;
         startAmount: string | number | bigint;
         endAmount: string | number | bigint;
@@ -240,73 +240,73 @@ export declare const SeaportOrderParamsSchema: z.ZodEffects<z.ZodObject<{
 }>;
 export declare const AuctionSchema: z.ZodObject<{
     collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-    liquidator: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+    liquidator: z.ZodString;
     orderParameters: z.ZodEffects<z.ZodObject<{
-        conduitKey: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-        offerer: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        conduitKey: z.ZodString;
+        offerer: z.ZodString;
         orderType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
         salt: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         totalOriginalConsiderationItems: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-        zone: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-        zoneHash: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+        zone: z.ZodString;
+        zoneHash: z.ZodString;
         "consideration[0]": z.ZodObject<{
             identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-            recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-            token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+            recipient: z.ZodString;
+            token: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
-            recipient: `0x${string}`;
+            recipient: string;
         }, {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         }>;
         "consideration[1]": z.ZodObject<{
             identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-            recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-            token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+            recipient: z.ZodString;
+            token: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
-            recipient: `0x${string}`;
+            recipient: string;
         }, {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         }>;
         "offer[0]": z.ZodObject<{
             identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-            token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+            token: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
         }, {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
@@ -315,31 +315,31 @@ export declare const AuctionSchema: z.ZodObject<{
         startTime: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         endTime: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     }, "strip", z.ZodTypeAny, {
-        conduitKey: `0x${string}`;
-        offerer: `0x${string}`;
+        conduitKey: string;
+        offerer: string;
         orderType: number;
         salt: bigint;
         totalOriginalConsiderationItems: bigint;
-        zone: `0x${string}`;
-        zoneHash: `0x${string}`;
+        zone: string;
+        zoneHash: string;
         "consideration[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "consideration[1]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "offer[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
@@ -348,31 +348,31 @@ export declare const AuctionSchema: z.ZodObject<{
         startTime: bigint;
         endTime: bigint;
     }, {
-        conduitKey: `0x${string}`;
-        offerer: `0x${string}`;
+        conduitKey: string;
+        offerer: string;
         orderType: string | number;
         salt: string | number | bigint;
         totalOriginalConsiderationItems: string | number | bigint;
-        zone: `0x${string}`;
-        zoneHash: `0x${string}`;
+        zone: string;
+        zoneHash: string;
         "consideration[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "consideration[1]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "offer[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
@@ -382,55 +382,55 @@ export declare const AuctionSchema: z.ZodObject<{
         endTime: string | number | bigint;
     }>, {
         consideration: {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
-            recipient: `0x${string}`;
+            recipient: string;
         }[];
         offer: {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
         }[];
-        conduitKey: `0x${string}`;
-        offerer: `0x${string}`;
+        conduitKey: string;
+        offerer: string;
         orderType: number;
         salt: bigint;
         totalOriginalConsiderationItems: bigint;
-        zone: `0x${string}`;
-        zoneHash: `0x${string}`;
+        zone: string;
+        zoneHash: string;
         startTime: bigint;
         endTime: bigint;
     }, {
-        conduitKey: `0x${string}`;
-        offerer: `0x${string}`;
+        conduitKey: string;
+        offerer: string;
         orderType: string | number;
         salt: string | number | bigint;
         totalOriginalConsiderationItems: string | number | bigint;
-        zone: `0x${string}`;
-        zoneHash: `0x${string}`;
+        zone: string;
+        zoneHash: string;
         "consideration[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "consideration[1]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "offer[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
@@ -443,30 +443,30 @@ export declare const AuctionSchema: z.ZodObject<{
     auctionEnd: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
     collateralId: bigint;
-    liquidator: `0x${string}`;
+    liquidator: string;
     orderParameters: {
         consideration: {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
-            recipient: `0x${string}`;
+            recipient: string;
         }[];
         offer: {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: bigint;
             startAmount: bigint;
             endAmount: bigint;
             itemType: number;
         }[];
-        conduitKey: `0x${string}`;
-        offerer: `0x${string}`;
+        conduitKey: string;
+        offerer: string;
         orderType: number;
         salt: bigint;
         totalOriginalConsiderationItems: bigint;
-        zone: `0x${string}`;
-        zoneHash: `0x${string}`;
+        zone: string;
+        zoneHash: string;
         startTime: bigint;
         endTime: bigint;
     };
@@ -474,33 +474,33 @@ export declare const AuctionSchema: z.ZodObject<{
     auctionEnd: number;
 }, {
     collateralId: string | number | bigint;
-    liquidator: `0x${string}`;
+    liquidator: string;
     orderParameters: {
-        conduitKey: `0x${string}`;
-        offerer: `0x${string}`;
+        conduitKey: string;
+        offerer: string;
         orderType: string | number;
         salt: string | number | bigint;
         totalOriginalConsiderationItems: string | number | bigint;
-        zone: `0x${string}`;
-        zoneHash: `0x${string}`;
+        zone: string;
+        zoneHash: string;
         "consideration[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "consideration[1]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
             itemType: string | number;
-            recipient: `0x${string}`;
+            recipient: string;
         };
         "offer[0]": {
-            token: `0x${string}`;
+            token: string;
             identifierOrCriteria: string | number | bigint;
             startAmount: string | number | bigint;
             endAmount: string | number | bigint;
@@ -515,73 +515,73 @@ export declare const AuctionSchema: z.ZodObject<{
 export declare const AuctionsResponseSchema: z.ZodObject<{
     results: z.ZodArray<z.ZodObject<{
         collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-        liquidator: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+        liquidator: z.ZodString;
         orderParameters: z.ZodEffects<z.ZodObject<{
-            conduitKey: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
-            offerer: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+            conduitKey: z.ZodString;
+            offerer: z.ZodString;
             orderType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
             salt: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             totalOriginalConsiderationItems: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-            zone: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-            zoneHash: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
+            zone: z.ZodString;
+            zoneHash: z.ZodString;
             "consideration[0]": z.ZodObject<{
                 identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-                recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-                token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+                recipient: z.ZodString;
+                token: z.ZodString;
             }, "strip", z.ZodTypeAny, {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
-                recipient: `0x${string}`;
+                recipient: string;
             }, {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             }>;
             "consideration[1]": z.ZodObject<{
                 identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-                recipient: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
-                token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+                recipient: z.ZodString;
+                token: z.ZodString;
             }, "strip", z.ZodTypeAny, {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
-                recipient: `0x${string}`;
+                recipient: string;
             }, {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             }>;
             "offer[0]": z.ZodObject<{
                 identifierOrCriteria: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 startAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 endAmount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 itemType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-                token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
+                token: z.ZodString;
             }, "strip", z.ZodTypeAny, {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
             }, {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
@@ -590,31 +590,31 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
             startTime: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             endTime: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         }, "strip", z.ZodTypeAny, {
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: number;
             salt: bigint;
             totalOriginalConsiderationItems: bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             "consideration[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "consideration[1]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "offer[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
@@ -623,31 +623,31 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
             startTime: bigint;
             endTime: bigint;
         }, {
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: string | number;
             salt: string | number | bigint;
             totalOriginalConsiderationItems: string | number | bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             "consideration[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "consideration[1]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "offer[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
@@ -657,55 +657,55 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
             endTime: string | number | bigint;
         }>, {
             consideration: {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
-                recipient: `0x${string}`;
+                recipient: string;
             }[];
             offer: {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
             }[];
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: number;
             salt: bigint;
             totalOriginalConsiderationItems: bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             startTime: bigint;
             endTime: bigint;
         }, {
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: string | number;
             salt: string | number | bigint;
             totalOriginalConsiderationItems: string | number | bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             "consideration[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "consideration[1]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "offer[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
@@ -718,30 +718,30 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
         auctionEnd: z.ZodNumber;
     }, "strip", z.ZodTypeAny, {
         collateralId: bigint;
-        liquidator: `0x${string}`;
+        liquidator: string;
         orderParameters: {
             consideration: {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
-                recipient: `0x${string}`;
+                recipient: string;
             }[];
             offer: {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
             }[];
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: number;
             salt: bigint;
             totalOriginalConsiderationItems: bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             startTime: bigint;
             endTime: bigint;
         };
@@ -749,33 +749,33 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
         auctionEnd: number;
     }, {
         collateralId: string | number | bigint;
-        liquidator: `0x${string}`;
+        liquidator: string;
         orderParameters: {
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: string | number;
             salt: string | number | bigint;
             totalOriginalConsiderationItems: string | number | bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             "consideration[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "consideration[1]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "offer[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
@@ -791,30 +791,30 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     results: {
         collateralId: bigint;
-        liquidator: `0x${string}`;
+        liquidator: string;
         orderParameters: {
             consideration: {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
-                recipient: `0x${string}`;
+                recipient: string;
             }[];
             offer: {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: bigint;
                 startAmount: bigint;
                 endAmount: bigint;
                 itemType: number;
             }[];
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: number;
             salt: bigint;
             totalOriginalConsiderationItems: bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             startTime: bigint;
             endTime: bigint;
         };
@@ -825,33 +825,33 @@ export declare const AuctionsResponseSchema: z.ZodObject<{
 }, {
     results: {
         collateralId: string | number | bigint;
-        liquidator: `0x${string}`;
+        liquidator: string;
         orderParameters: {
-            conduitKey: `0x${string}`;
-            offerer: `0x${string}`;
+            conduitKey: string;
+            offerer: string;
             orderType: string | number;
             salt: string | number | bigint;
             totalOriginalConsiderationItems: string | number | bigint;
-            zone: `0x${string}`;
-            zoneHash: `0x${string}`;
+            zone: string;
+            zoneHash: string;
             "consideration[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "consideration[1]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
                 itemType: string | number;
-                recipient: `0x${string}`;
+                recipient: string;
             };
             "offer[0]": {
-                token: `0x${string}`;
+                token: string;
                 identifierOrCriteria: string | number | bigint;
                 startAmount: string | number | bigint;
                 endAmount: string | number | bigint;
