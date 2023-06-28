@@ -51,6 +51,6 @@ exports.AuctionSchema = zod_1.z.object({
 });
 exports.AuctionsResponseSchema = zod_1.z.object({
     results: zod_1.z.array(exports.AuctionSchema),
-    count: zod_1.z.number().int().min(0),
+    count: zod_1.z.number().int().nonnegative()
 });
 //# sourceMappingURL=auctions.dto.js.map

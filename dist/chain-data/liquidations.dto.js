@@ -10,7 +10,6 @@ exports.Liquidation = zod_1.z.object({
     position: zod_1.z.number().int().min(0).max(4),
 });
 exports.LiquidationsResponseSchema = zod_1.z.object({
-    results: zod_1.z.array(exports.Liquidation),
-    count: zod_1.z.number().int().min(0),
+    count: zod_1.z.number().int().nonnegative()
 });
 //# sourceMappingURL=liquidations.dto.js.map

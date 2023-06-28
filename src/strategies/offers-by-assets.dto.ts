@@ -15,7 +15,7 @@ export const OffersByAssetsRequestSchema = z.object({
 
 export const OffersByAssetsResponseSchema = z.object({
   results: z.array(OfferSchema),
-  count: z.number().int().min(0),
+  count: z.number().int().nonnegative()
 });
 
 export type Asset = z.input<typeof AssetSchema>;

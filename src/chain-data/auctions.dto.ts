@@ -59,7 +59,7 @@ export const AuctionSchema = z.object({
 
 export const AuctionsResponseSchema = z.object({
   results: z.array(AuctionSchema),
-  count: z.number().int().min(0),
+  count: z.number().int().nonnegative()
 });
 
 export type Auction = z.infer<typeof AuctionSchema>;

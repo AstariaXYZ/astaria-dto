@@ -76,7 +76,7 @@ export const VaultsQueryParamsSchema = z
 
 export const VaultsResponseSchema = z.object({
   results: z.array(VaultResponseSchema),
-  count: z.number().int().positive()
+  count: z.number().int().nonnegative()
 });
 
 export type WithdrawBalance = z.infer<typeof WithdrawBalanceSchema>;
