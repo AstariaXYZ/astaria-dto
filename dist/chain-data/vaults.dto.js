@@ -66,6 +66,6 @@ exports.VaultsQueryParamsSchema = zod_1.z
     .merge(common_1.PaginationParamsSchema);
 exports.VaultsResponseSchema = zod_1.z.object({
     results: zod_1.z.array(exports.VaultResponseSchema),
-    count: zod_1.z.number().int().positive().max(100),
+    count: zod_1.z.number().int().positive()
 });
 //# sourceMappingURL=vaults.dto.js.map
