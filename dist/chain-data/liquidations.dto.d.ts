@@ -1,7 +1,7 @@
 import { z } from "zod";
 export declare const Liquidation: z.ZodObject<{
     collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-    stack: z.ZodArray<z.ZodObject<{
+    stack: z.ZodObject<{
         lien: z.ZodObject<{
             collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             collateralType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
@@ -112,8 +112,7 @@ export declare const Liquidation: z.ZodObject<{
             last: string | number;
             lienId: string | number | bigint;
         };
-    }>, "many">;
-    position: z.ZodNumber;
+    }>;
 }, "strip", z.ZodTypeAny, {
     collateralId: bigint;
     stack: {
@@ -137,8 +136,7 @@ export declare const Liquidation: z.ZodObject<{
             last: number;
             lienId: bigint;
         };
-    }[];
-    position: number;
+    };
 }, {
     collateralId: string | number | bigint;
     stack: {
@@ -162,13 +160,12 @@ export declare const Liquidation: z.ZodObject<{
             last: string | number;
             lienId: string | number | bigint;
         };
-    }[];
-    position: number;
+    };
 }>;
 export declare const LiquidationsResponseSchema: z.ZodObject<{
     results: z.ZodArray<z.ZodObject<{
         collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-        stack: z.ZodArray<z.ZodObject<{
+        stack: z.ZodObject<{
             lien: z.ZodObject<{
                 collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 collateralType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
@@ -279,8 +276,7 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
                 last: string | number;
                 lienId: string | number | bigint;
             };
-        }>, "many">;
-        position: z.ZodNumber;
+        }>;
     }, "strip", z.ZodTypeAny, {
         collateralId: bigint;
         stack: {
@@ -304,8 +300,7 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
                 last: number;
                 lienId: bigint;
             };
-        }[];
-        position: number;
+        };
     }, {
         collateralId: string | number | bigint;
         stack: {
@@ -329,8 +324,7 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
                 last: string | number;
                 lienId: string | number | bigint;
             };
-        }[];
-        position: number;
+        };
     }>, "many">;
     count: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
@@ -357,8 +351,7 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
                 last: number;
                 lienId: bigint;
             };
-        }[];
-        position: number;
+        };
     }[];
     count: number;
 }, {
@@ -385,8 +378,7 @@ export declare const LiquidationsResponseSchema: z.ZodObject<{
                 last: string | number;
                 lienId: string | number | bigint;
             };
-        }[];
-        position: number;
+        };
     }[];
     count: number;
 }>;

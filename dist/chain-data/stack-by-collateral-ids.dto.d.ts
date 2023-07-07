@@ -1,7 +1,7 @@
 import { z } from "zod";
 export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<{
     collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
-    stack: z.ZodArray<z.ZodObject<{
+    stack: z.ZodObject<{
         lien: z.ZodObject<{
             collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             collateralType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
@@ -112,7 +112,7 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
             last: string | number;
             lienId: string | number | bigint;
         };
-    }>, "many">;
+    }>;
 }, "strip", z.ZodTypeAny, {
     collateralId: bigint;
     stack: {
@@ -136,7 +136,7 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
             last: number;
             lienId: bigint;
         };
-    }[];
+    };
 }, {
     collateralId: string | number | bigint;
     stack: {
@@ -160,7 +160,7 @@ export declare const StackByCollateralIdsResponseSchema: z.ZodArray<z.ZodObject<
             last: string | number;
             lienId: string | number | bigint;
         };
-    }[];
+    };
 }>, "many">;
 export type StackByCollateralIdsResponse = z.input<typeof StackByCollateralIdsResponseSchema>;
 export type StackByCollateralIdsParsedResponse = z.infer<typeof StackByCollateralIdsResponseSchema>;

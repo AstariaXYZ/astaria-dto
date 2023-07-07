@@ -4,8 +4,7 @@ import { Uint256Schema } from "../common/number";
 
 export const Liquidation = z.object({
   collateralId: Uint256Schema,
-  stack: z.array(StackSlotSchema),
-  position: z.number().int().min(0).max(4),
+  stack: StackSlotSchema,
 });
 
 export const LiquidationsResponseSchema = z.object({

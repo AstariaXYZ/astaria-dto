@@ -6,8 +6,7 @@ const stack_slot_1 = require("./common/stack-slot");
 const number_1 = require("../common/number");
 exports.Liquidation = zod_1.z.object({
     collateralId: number_1.Uint256Schema,
-    stack: zod_1.z.array(stack_slot_1.StackSlotSchema),
-    position: zod_1.z.number().int().min(0).max(4),
+    stack: stack_slot_1.StackSlotSchema,
 });
 exports.LiquidationsResponseSchema = zod_1.z.object({
     results: zod_1.z.array(exports.Liquidation),
