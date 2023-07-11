@@ -1,4 +1,4 @@
-import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
+import { AddressSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
 import {
   Uint256NonZeroSchema,
@@ -11,7 +11,6 @@ export const PointSchema = z.object({
   amount: Uint256Schema,
   end: Uint40Schema,
   last: Uint40Schema,
-  lienId: Uint256Schema,
 });
 
 export const LienDetailsSchema = z.object({
@@ -26,7 +25,6 @@ export const LienSchema = z.object({
   collateralId: Uint256Schema,
   collateralType: Uint8Schema,
   details: LienDetailsSchema,
-  strategyRoot: HexSchema,
   token: AddressSchema,
   vault: AddressSchema,
 });

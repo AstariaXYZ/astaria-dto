@@ -8,7 +8,6 @@ exports.PointSchema = zod_1.z.object({
     amount: number_1.Uint256Schema,
     end: number_1.Uint40Schema,
     last: number_1.Uint40Schema,
-    lienId: number_1.Uint256Schema,
 });
 exports.LienDetailsSchema = zod_1.z.object({
     maxAmount: number_1.Uint256Schema,
@@ -21,7 +20,6 @@ exports.LienSchema = zod_1.z.object({
     collateralId: number_1.Uint256Schema,
     collateralType: number_1.Uint8Schema,
     details: exports.LienDetailsSchema,
-    strategyRoot: sdk_1.HexSchema,
     token: sdk_1.AddressSchema,
     vault: sdk_1.AddressSchema,
 });

@@ -6,6 +6,6 @@ const number_1 = require("../common/number");
 const stack_slot_1 = require("./common/stack-slot");
 exports.StackByCollateralIdsResponseSchema = zod_1.z.array(zod_1.z.object({
     collateralId: number_1.Uint256Schema,
-    stack: zod_1.z.array(stack_slot_1.StackSlotSchema),
+    stack: stack_slot_1.StackSlotSchema,
 }));
 //# sourceMappingURL=stack-by-collateral-ids.dto.js.map

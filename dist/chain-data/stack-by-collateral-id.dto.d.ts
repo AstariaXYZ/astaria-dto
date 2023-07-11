@@ -22,7 +22,6 @@ export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
             maxPotentialDebt: string | number | bigint;
             liquidationInitialAsk: string | number | bigint;
         }>;
-        strategyRoot: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
         token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         vault: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
     }, "strip", z.ZodTypeAny, {
@@ -36,7 +35,6 @@ export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
             maxPotentialDebt: bigint;
             liquidationInitialAsk: bigint;
         };
-        strategyRoot: `0x${string}`;
         token: `0x${string}`;
     }, {
         vault: `0x${string}`;
@@ -49,24 +47,20 @@ export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
             maxPotentialDebt: string | number | bigint;
             liquidationInitialAsk: string | number | bigint;
         };
-        strategyRoot: `0x${string}`;
         token: `0x${string}`;
     }>;
     point: z.ZodObject<{
         amount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         end: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
         last: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
-        lienId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
     }, "strip", z.ZodTypeAny, {
         amount: bigint;
         end: number;
         last: number;
-        lienId: bigint;
     }, {
         amount: string | number | bigint;
         end: string | number;
         last: string | number;
-        lienId: string | number | bigint;
     }>;
 }, "strip", z.ZodTypeAny, {
     lien: {
@@ -80,14 +74,12 @@ export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
             maxPotentialDebt: bigint;
             liquidationInitialAsk: bigint;
         };
-        strategyRoot: `0x${string}`;
         token: `0x${string}`;
     };
     point: {
         amount: bigint;
         end: number;
         last: number;
-        lienId: bigint;
     };
 }, {
     lien: {
@@ -101,14 +93,12 @@ export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
             maxPotentialDebt: string | number | bigint;
             liquidationInitialAsk: string | number | bigint;
         };
-        strategyRoot: `0x${string}`;
         token: `0x${string}`;
     };
     point: {
         amount: string | number | bigint;
         end: string | number;
         last: string | number;
-        lienId: string | number | bigint;
     };
 }>, "many">;
 export type StackByCollateralIdResponse = z.input<typeof StackByCollateralIdResponseSchema>;
