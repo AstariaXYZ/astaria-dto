@@ -102,7 +102,7 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
             last: string | number;
         };
     }>;
-    auction: z.ZodObject<{
+    auction: z.ZodOptional<z.ZodObject<{
         liquidator: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         orderParameters: z.ZodObject<{
             conduitKey: z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>;
@@ -274,7 +274,7 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
         offererCounterAtLiquidation: string | number | bigint;
         auctionStart: number;
         auctionEnd: number;
-    }>;
+    }>>;
 }, "strip", z.ZodTypeAny, {
     stack: {
         lien: {
@@ -296,7 +296,7 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
             last: number;
         };
     };
-    auction: {
+    auction?: {
         liquidator: `0x${string}`;
         orderParameters: {
             conduitKey: `0x${string}`;
@@ -328,7 +328,7 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
         offererCounterAtLiquidation: bigint;
         auctionStart: number;
         auctionEnd: number;
-    };
+    } | undefined;
 }, {
     stack: {
         lien: {
@@ -350,7 +350,7 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
             last: string | number;
         };
     };
-    auction: {
+    auction?: {
         liquidator: `0x${string}`;
         orderParameters: {
             conduitKey: `0x${string}`;
@@ -382,6 +382,6 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
         offererCounterAtLiquidation: string | number | bigint;
         auctionStart: number;
         auctionEnd: number;
-    };
+    } | undefined;
 }>;
 export type LienAndAuctionSchema = z.infer<typeof LienAndAuctionSchema>;

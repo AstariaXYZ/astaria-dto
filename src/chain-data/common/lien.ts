@@ -4,7 +4,7 @@ import { StackSlotSchema } from './stack-slot';
 
 export const LienAndAuctionSchema = z.object({
   stack: StackSlotSchema,
-  auction: AuctionSchema
+  auction: AuctionSchema.optional(),
 });
 
 export type LienAndAuctionSchema = z.infer<typeof LienAndAuctionSchema>;

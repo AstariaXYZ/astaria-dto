@@ -29,6 +29,6 @@ const auction_1 = require("./auction");
 const stack_slot_1 = require("./stack-slot");
 exports.LienAndAuctionSchema = z.object({
     stack: stack_slot_1.StackSlotSchema,
-    auction: auction_1.AuctionSchema
+    auction: auction_1.AuctionSchema.optional(),
 });
 //# sourceMappingURL=lien.js.map
