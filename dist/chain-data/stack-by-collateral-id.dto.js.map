@@ -1,1 +1,1 @@
-{"version":3,"file":"stack-by-collateral-id.dto.js","sourceRoot":"","sources":["../../src/chain-data/stack-by-collateral-id.dto.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AACxB,oDAAsD;AAEzC,QAAA,iCAAiC,GAAG,OAAC,CAAC,KAAK,CAAC,4BAAe,CAAC,CAAC"}
+{"version":3,"file":"stack-by-collateral-id.dto.js","sourceRoot":"","sources":["../../src/chain-data/stack-by-collateral-id.dto.ts"],"names":[],"mappings":";;;AACA,oDAAsD;AAEzC,QAAA,iCAAiC,GAAG,4BAAe,CAAC"}

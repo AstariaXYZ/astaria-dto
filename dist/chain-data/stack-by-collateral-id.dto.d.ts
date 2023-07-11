@@ -1,5 +1,5 @@
 import { z } from "zod";
-export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
+export declare const StackByCollateralIdResponseSchema: z.ZodObject<{
     lien: z.ZodObject<{
         collateralId: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
         collateralType: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber]>, number, string | number>, number, string | number>, number, string | number>;
@@ -100,6 +100,6 @@ export declare const StackByCollateralIdResponseSchema: z.ZodArray<z.ZodObject<{
         end: string | number;
         last: string | number;
     };
-}>, "many">;
+}>;
 export type StackByCollateralIdResponse = z.input<typeof StackByCollateralIdResponseSchema>;
 export type StackByCollateralIdParsedResponse = z.infer<typeof StackByCollateralIdResponseSchema>;
