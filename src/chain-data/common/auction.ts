@@ -1,6 +1,6 @@
-import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
 import { Uint256Schema, Uint8Schema } from "../../common/number";
+import { AddressSchema, HexSchema } from "../../common/sdk-stuff";
 
 export const SeaportOfferItemSchema = z.object({
   identifierOrCriteria: Uint256Schema,

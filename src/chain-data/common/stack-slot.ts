@@ -1,4 +1,3 @@
-import { AddressSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
 import {
   Uint256NonZeroSchema,
@@ -6,6 +5,7 @@ import {
   Uint40Schema,
   Uint8Schema,
 } from "../../common/number";
+import { AddressSchema } from "../../common/sdk-stuff";
 
 export const PointSchema = z.object({
   amount: Uint256Schema,

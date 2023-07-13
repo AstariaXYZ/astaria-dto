@@ -1,6 +1,6 @@
 import * as z from "zod";
-import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { CidSchema } from "../common/cid";
+import { AddressSchema, HexSchema } from "../common/sdk-stuff";
 
 export const StrategyPrepareRequestSchema = z.object({
   delegateAddress: AddressSchema,
