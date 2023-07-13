@@ -51,12 +51,12 @@ export declare const VaultResponseSchema: z.ZodObject<{
     strategistName: z.ZodOptional<z.ZodString>;
     isVerified: z.ZodOptional<z.ZodBoolean>;
 }, "strip", z.ZodTypeAny, {
+    name: string;
     vault: `0x${string}`;
     vaultBalance: bigint;
     vaultType: VaultType;
     strategist: `0x${string}`;
     delegate: `0x${string}`;
-    name: string;
     depositBalance?: bigint | undefined;
     withdrawBalances?: {
         balance: bigint;
@@ -70,12 +70,12 @@ export declare const VaultResponseSchema: z.ZodObject<{
     strategistName?: string | undefined;
     isVerified?: boolean | undefined;
 }, {
+    name: string;
     vault: `0x${string}`;
     vaultBalance: string | number | bigint;
     vaultType: VaultType;
     strategist: `0x${string}`;
     delegate: `0x${string}`;
-    name: string;
     depositBalance?: string | number | bigint | undefined;
     withdrawBalances?: {
         balance: string | number | bigint;
@@ -199,12 +199,12 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         strategistName: z.ZodOptional<z.ZodString>;
         isVerified: z.ZodOptional<z.ZodBoolean>;
     }, "strip", z.ZodTypeAny, {
+        name: string;
         vault: `0x${string}`;
         vaultBalance: bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
-        name: string;
         depositBalance?: bigint | undefined;
         withdrawBalances?: {
             balance: bigint;
@@ -218,12 +218,12 @@ export declare const VaultsResponseSchema: z.ZodObject<{
         strategistName?: string | undefined;
         isVerified?: boolean | undefined;
     }, {
+        name: string;
         vault: `0x${string}`;
         vaultBalance: string | number | bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
-        name: string;
         depositBalance?: string | number | bigint | undefined;
         withdrawBalances?: {
             balance: string | number | bigint;
@@ -240,12 +240,12 @@ export declare const VaultsResponseSchema: z.ZodObject<{
     count: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
     results: {
+        name: string;
         vault: `0x${string}`;
         vaultBalance: bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
-        name: string;
         depositBalance?: bigint | undefined;
         withdrawBalances?: {
             balance: bigint;
@@ -262,12 +262,12 @@ export declare const VaultsResponseSchema: z.ZodObject<{
     count: number;
 }, {
     results: {
+        name: string;
         vault: `0x${string}`;
         vaultBalance: string | number | bigint;
         vaultType: VaultType;
         strategist: `0x${string}`;
         delegate: `0x${string}`;
-        name: string;
         depositBalance?: string | number | bigint | undefined;
         withdrawBalances?: {
             balance: string | number | bigint;

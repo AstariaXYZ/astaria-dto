@@ -11,44 +11,44 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
                 maxPotentialDebt: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
                 liquidationInitialAsk: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
             }, "strip", z.ZodTypeAny, {
-                maxAmount: bigint;
                 rate: bigint;
                 duration: bigint;
                 maxPotentialDebt: bigint;
                 liquidationInitialAsk: bigint;
+                maxAmount: bigint;
             }, {
-                maxAmount: string | number | bigint;
                 rate: string | number | bigint;
                 duration: string | number | bigint;
                 maxPotentialDebt: string | number | bigint;
                 liquidationInitialAsk: string | number | bigint;
+                maxAmount: string | number | bigint;
             }>;
             token: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
             vault: z.ZodEffects<z.ZodEffects<z.ZodType<`0x${string}`, z.ZodTypeDef, `0x${string}`>, `0x${string}`, `0x${string}`>, `0x${string}`, `0x${string}`>;
         }, "strip", z.ZodTypeAny, {
+            token: `0x${string}`;
             vault: `0x${string}`;
             collateralId: bigint;
             collateralType: number;
             details: {
-                maxAmount: bigint;
                 rate: bigint;
                 duration: bigint;
                 maxPotentialDebt: bigint;
                 liquidationInitialAsk: bigint;
+                maxAmount: bigint;
             };
-            token: `0x${string}`;
         }, {
+            token: `0x${string}`;
             vault: `0x${string}`;
             collateralId: string | number | bigint;
             collateralType: string | number;
             details: {
-                maxAmount: string | number | bigint;
                 rate: string | number | bigint;
                 duration: string | number | bigint;
                 maxPotentialDebt: string | number | bigint;
                 liquidationInitialAsk: string | number | bigint;
+                maxAmount: string | number | bigint;
             };
-            token: `0x${string}`;
         }>;
         point: z.ZodObject<{
             amount: z.ZodEffects<z.ZodEffects<z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBigInt]>, bigint, string | number | bigint>, bigint, string | number | bigint>, bigint, string | number | bigint>;
@@ -65,17 +65,17 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
         }>;
     }, "strip", z.ZodTypeAny, {
         lien: {
+            token: `0x${string}`;
             vault: `0x${string}`;
             collateralId: bigint;
             collateralType: number;
             details: {
-                maxAmount: bigint;
                 rate: bigint;
                 duration: bigint;
                 maxPotentialDebt: bigint;
                 liquidationInitialAsk: bigint;
+                maxAmount: bigint;
             };
-            token: `0x${string}`;
         };
         point: {
             amount: bigint;
@@ -84,17 +84,17 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
         };
     }, {
         lien: {
+            token: `0x${string}`;
             vault: `0x${string}`;
             collateralId: string | number | bigint;
             collateralType: string | number;
             details: {
-                maxAmount: string | number | bigint;
                 rate: string | number | bigint;
                 duration: string | number | bigint;
                 maxPotentialDebt: string | number | bigint;
                 liquidationInitialAsk: string | number | bigint;
+                maxAmount: string | number | bigint;
             };
-            token: `0x${string}`;
         };
         point: {
             amount: string | number | bigint;
@@ -278,17 +278,17 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     stack: {
         lien: {
+            token: `0x${string}`;
             vault: `0x${string}`;
             collateralId: bigint;
             collateralType: number;
             details: {
-                maxAmount: bigint;
                 rate: bigint;
                 duration: bigint;
                 maxPotentialDebt: bigint;
                 liquidationInitialAsk: bigint;
+                maxAmount: bigint;
             };
-            token: `0x${string}`;
         };
         point: {
             amount: bigint;
@@ -332,17 +332,17 @@ export declare const LienAndAuctionSchema: z.ZodObject<{
 }, {
     stack: {
         lien: {
+            token: `0x${string}`;
             vault: `0x${string}`;
             collateralId: string | number | bigint;
             collateralType: string | number;
             details: {
-                maxAmount: string | number | bigint;
                 rate: string | number | bigint;
                 duration: string | number | bigint;
                 maxPotentialDebt: string | number | bigint;
                 liquidationInitialAsk: string | number | bigint;
+                maxAmount: string | number | bigint;
             };
-            token: `0x${string}`;
         };
         point: {
             amount: string | number | bigint;

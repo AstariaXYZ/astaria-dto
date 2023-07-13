@@ -25,11 +25,11 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.StrategyPrepareResponseSchema = exports.StrategyPrepareRequestSchema = void 0;
 const z = __importStar(require("zod"));
-const sdk_1 = require("@astariaxyz/sdk");
 const cid_1 = require("../common/cid");
+const sdk_stuff_1 = require("../common/sdk-stuff");
 exports.StrategyPrepareRequestSchema = z.object({
-    delegateAddress: sdk_1.AddressSchema,
-    signature: sdk_1.HexSchema,
+    delegateAddress: sdk_stuff_1.AddressSchema,
+    signature: sdk_stuff_1.HexSchema,
     cid: cid_1.CidSchema,
 });
 exports.StrategyPrepareResponseSchema = z.object({

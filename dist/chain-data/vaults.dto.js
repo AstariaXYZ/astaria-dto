@@ -1,29 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VaultsResponseSchema = exports.VaultsQueryParamsSchema = exports.VaultsQueryParamsSchemaOld = exports.VaultResponseSchema = exports.WithdrawBalanceSchema = exports.VaultQueryParamsSchema = exports.VaultType = void 0;
-const sdk_1 = require("@astariaxyz/sdk");
 const zod_1 = require("zod");
 const common_1 = require("../common");
 const number_1 = require("../common/number");
+const sdk_stuff_1 = require("../common/sdk-stuff");
 var VaultType;
 (function (VaultType) {
     VaultType["Private"] = "0";
     VaultType["Public"] = "1";
 })(VaultType || (exports.VaultType = VaultType = {}));
 exports.VaultQueryParamsSchema = zod_1.z.object({
-    lp: sdk_1.AddressSchema.optional(),
+    lp: sdk_stuff_1.AddressSchema.optional(),
 });
 exports.WithdrawBalanceSchema = zod_1.z.object({
     balance: number_1.Uint256Schema,
     epoch: number_1.Uint256Schema,
-    withdrawProxy: sdk_1.HexSchema,
+    withdrawProxy: sdk_stuff_1.HexSchema,
 });
 exports.VaultResponseSchema = zod_1.z.object({
-    vault: sdk_1.AddressSchema,
+    vault: sdk_stuff_1.AddressSchema,
     vaultBalance: number_1.Uint256Schema,
     vaultType: zod_1.z.nativeEnum(VaultType),
-    strategist: sdk_1.AddressSchema,
-    delegate: sdk_1.AddressSchema,
+    strategist: sdk_stuff_1.AddressSchema,
+    delegate: sdk_stuff_1.AddressSchema,
     depositBalance: number_1.Uint256Schema.optional(),
     withdrawBalances: zod_1.z.array(exports.WithdrawBalanceSchema).optional(),
     //off-chain data
@@ -37,17 +37,17 @@ exports.VaultResponseSchema = zod_1.z.object({
 });
 exports.VaultsQueryParamsSchemaOld = zod_1.z
     .object({
-    lp: sdk_1.AddressSchema.optional(),
-    auth: sdk_1.AddressSchema.optional(),
+    lp: sdk_stuff_1.AddressSchema.optional(),
+    auth: sdk_stuff_1.AddressSchema.optional(),
     verified: common_1.BoolParamSchema,
 })
     .merge(common_1.PaginationParamsSchema);
 exports.VaultsQueryParamsSchema = zod_1.z
     .object({
-    lp: sdk_1.AddressSchema.optional(),
+    lp: sdk_stuff_1.AddressSchema.optional(),
     filter: zod_1.z
         .object({
-        auth: sdk_1.AddressSchema.optional(),
+        auth: sdk_stuff_1.AddressSchema.optional(),
         verified: common_1.BoolParamSchema,
         lp: common_1.BoolParamSchema,
     })

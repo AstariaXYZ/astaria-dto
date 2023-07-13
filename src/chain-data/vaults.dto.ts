@@ -1,7 +1,7 @@
-import { AddressSchema, HexSchema } from "@astariaxyz/sdk";
 import { z } from "zod";
 import { BoolParamSchema, PaginationParamsSchema } from "../common";
 import { Uint256Schema } from "../common/number";
+import { AddressSchema, HexSchema } from "../common/sdk-stuff";
 
 export enum VaultType {
   Private = "0",

@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { ProofSchema, SignatureSchema, TypedDataSchema } from "@astariaxyz/sdk";
 import { CidSchema } from "../common/cid";
+import { ProofSchema, SignatureSchema, TypedDataSchema } from "../common/sdk-stuff";
 
 export const ProofByHashResponseSchema = z.object({
   proof: ProofSchema,
